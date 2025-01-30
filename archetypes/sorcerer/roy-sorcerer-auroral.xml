@@ -4,8 +4,8 @@
 		<name>Auroral Bloodline</name>
 		<description>The Auroral Bloodline from Royalty for the Galdera Setting.</description>
 		<author>Royalty</author>
-		<update version="0.1.1">
-			<file name="roy-sorcerer-auroral.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-sorcerer-auroral.xml" />
+		<update version="0.1.2">
+			<file name="roy-sorcerer-auroral.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-auroral.xml" />
 		</update>
 	</info>
 
