@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Cosmic Body</name>
+		<description>The Cosmic Body Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1">
+			<file name="roy-sorcerer-cosmic-body.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-sorcerer-cosmic-body.xml" />
+		</update>
+	</info>
+
+	<element name="Cosmic Body" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_COSMIC_BODY">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>You are a being connected to the near-infinite space around your world, that of which gives your starry nights and sunny days. Your otherworldly magic bonds you with the celestial bodies light-years away, giving your soul a hunger for exploration. Will you try to reach your family in the stars, or will you make them proud by being a shining star on your world?</p>
+			<p>As a Cosmic Body sorcerer, you decide how you obtained your powers. Were you born with them, or did a significant event leave a fragment of space within you? The Cosmic Origins table provides possible origins for your powers.</p>
+			<table>
+				<thead>
+					<tr><td>d6</td><td>Cosmic Origin</td></tr>
+				</thead>
+					<tr><td>1</td><td>A magical eclipse, said to occur only every millennia, occurred during your birth.</td></tr>
+					<tr><td>2</td><td>In your attempts to climb the highest mountains or journey the northernmost regions, you came into physical contact with an aurora.</td></tr>
+					<tr><td>3</td><td>Your parents wished upon a falling stars, and from its crater, they found you.</td></tr>
+					<tr><td>4</td><td>As a child, you manifested a small light above your head. Ever since then, you feel its desire to explore grow.</td></tr>
+					<tr><td>5</td><td>A fragment from the astral plane imbued itself in you. At night, you glow like the many stars above you.</td></tr>
+					<tr><td>6</td><td>Your family has kept a meteorite in the family home for generations. Its residual magic has made each of you share a connection of its old home.</td></tr>
+			</table>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_COSMIC_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_SOLAR_BODY" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_PLANETARY_IMITATION" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_EXTRADIMENSIONAL_SPHERE" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_WISH_UPON_A_STAR" />
+		</description>
+		<sheet display="false">
+			<description>You are a being connected to the near-infinite space around your world, that of which gives your starry nights and sunny days.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_COSMIC_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_SOLAR_BODY" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_PLANETARY_IMITATION" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_EXTRADIMENSIONAL_SPHERE" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_WISH_UPON_A_STAR" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Cosmic Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_COSMIC_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or conjuration spell from the sorcerer, druid, or warlock spell list.</p>
+			<h5 class="caption">Cosmic Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Guiding Bolt, Magnify Gravity</em></td></tr>
+					<tr><td>3rd</td><td><em>Moonbeam, Silence</em></td></tr>
+					<tr><td>5th</td><td><em>Hypnotic Pattern, Melf's Minute Meteors</em></td></tr>
+					<tr><td>7th</td><td><em>Banishment, Gravity Sinkhole</em></td></tr>
+					<tr><td>9th</td><td><em>Dawn, Temporal Shunt</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Cosmic Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or conjuration spell from the sorcerer, druid, or warlock spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Cosmic Spells" supports="1,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Guiding Bolt)" level="1" default="ID_PHB_SPELL_GUIDING_BOLT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="1,(Evocation||Conjuration||Magnify Gravity),(($(spellcasting:list))||Druid||Warlock||Magnify Gravity)" level="1" default="ID_WOTC_EGTW_SPELL_MAGNIFY_GRAVITY" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="2,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Moonbeam)" level="3" default="ID_PHB_SPELL_MOONBEAM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="2,(Evocation||Conjuration||Silence),(($(spellcasting:list))||Druid||Warlock||Silence)" level="3" default="ID_PHB_SPELL_SILENCE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="3,(Evocation||Conjuration||Hypnotic Pattern),(($(spellcasting:list))||Druid||Warlock||Hypnotic Pattern)" level="5" default="ID_PHB_SPELL_HYPNOTIC_PATTERN" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="3,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Melfs Minute Meteors)" level="5" default="ID_XGTE_SPELL_MELFS_MINUTE_METEORS" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="4,(Evocation||Conjuration||Banishment),(($(spellcasting:list))||Druid||Warlock||Banishment)" level="7" default="ID_PHB_SPELL_BANISHMENT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="4,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Gravity Sinkhole)" level="7" default="ID_WOTC_EGTW_SPELL_GRAVITY_SINKHOLE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="5,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Dawn)" level="9" default="ID_XGTE_SPELL_DAWN" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cosmic Spells" supports="5,(Evocation||Conjuration||Temporal Shunt),(($(spellcasting:list))||Druid||Warlock||Temporal Shunt)" level="9" default="ID_WOTC_EGTW_SPELL_TEMPORAL_SHUNT" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Solar Body" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_SOLAR_BODY">
+		<description>
+		<p>When you take this bloodline at 1st level, you can imitate a solar system. Whenever you finish a long rest, you create an number of motes, equal to your proficiency bonus, to gravitate around you. These motes can be made of earth, light, or gas.</p>
+		<p class="indent">Whenever you are the target of an attack roll or be forced to make a Dexterity saving throw, you can use your reaction to expend one of your motes. Doing so grants you a bonus to your AC or saving throw equal to your Charisma modifier (minimum of +1) against the triggering attack or save.</p>
+		<p class="indent">When you have no motes left, you can instead spend your reaction to deal an amount of fire or cold damage (your choice) to your attacker equal to your Charisma modifier.</p>
+		<p class="indent">Any motes you have left once you finish your next long rest dissipate in a flash of light.</p>
+		</description>
+		<sheet alt="Solar Body" action="Reaction" >
+			<description>You create {{proficiency}} solar motes to shield you throughout your day. Whenever you are the target of an attack roll or be forced to make a Dexterity saving throw, you can expend one of your motes and grant yourself a +{{solar body:bonus}} bonus to either your AC or saving throw against the triggering attack or save. &#13;
+			When you have no motes left, you can instead spend your reaction to deal {{solar body:bonus}} fire or cold damage (your choice) to your attacker.</description>
+		</sheet>
+		<rules>
+			<stat name="solar body:bonus" value="1" bonus="base" />
+			<stat name="solar body:bonus" value="charisma:modifier" bonus="base" />
+		</rules>
+	</element>
+	
+	<element name="Level 6: Planetary Imitation" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_PLANETARY_IMITATION">
+		<description>
+			<p>At 6th level, you can give someone a gravitational pull. As a bonus action, you can spend 2 sorcery points and target a creature you can see within 60 feet of you. Until the start of your next turn, that creature gains a flying speed equal to their movement. This flying speed does not provoke attacks of opportunity.</p>
+			<p class="indent">Any creature that starts its turn within 30 feet of the target and are of the same size or smaller must make a Strength saving throw against your spell save DC. On a failed save, they are pulled up to 20 feet towards the target of this feature.</p>
+			<p class="indent">Whenever you would spend sorcery points to grant this feature, you can spend additional sorcery points to provide another effect. For each additional sorcery point spent, the target possesses this feature for an additional round. Additionally, you can spend an extra sorcery point to have creatures make the Strength save with disadvantage.</p>
+		</description>
+		<sheet alt="Planetary Imitation" action="Bonus Action">
+			<description>You can spend 2 sorcery points and target a creature you can see within 60 feet of you. Until the start of your next turn, that creature gains a flying speed equal to their movement. This flying speed does not provoke attacks of opportunity. &#13;
+			Any creature that starts its turn within 30 feet of the target and are of the same size or smaller must make a DC{{sorcerer:spellcasting:dc}} Strength saving throw. On a failed save, they are pulled up to 20 feet towards the target of this feature. &#13;
+			When you create this gravitational field, you can spend additional sorcery points to increase its duration by one round per point spent. You can also spend one additional sorcery point to have creatures make the Strength saving throw with disadvantage.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Extradimensional Sphere" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_EXTRADIMENSIONAL_SPHERE">
+		<description>
+			<p>Starting at 14th level, you can create a black hole, absorbing creatures into it before firing them out elsewhere. As an action, choose a point you can see within 40 feet of you. Any creature entirely within a 15-foot radius of that point must succeed a Dexterity saving throw or be absorbed into this extradimensional hole, taking 3d10 force damage. Any objects of Large size or smaller than aren't being worn, carried, or secured to anything are absorbed into this hole. The hole then disappears at the end of your turn.</p>
+			<p class="indent">At the start of your next turn, choose another point you can see within 40 feet of you. Any creatures and objects that were absorbed into the previous hole you created are ejected within a 15-foot radius of this point, landing in an unoccupied space of your choice within the radius. If there are no unoccupied spaces within this radius, they instead land in the closest unoccupied spaces to this radius.</p>
+			<p class="indent">Additionally, you can perform this feature by choosing a creature affected by your Planetary Imitation. Doing so automatically absorbs them into the abyss, but they take no damage through this feature. Instead, the radius of this feature increases into a 30-foot radius.</p>
+			<p class="indent">Once you have used this feature, you cannot use it again until you finish a long rest.</p>
+		</description>
+		<sheet alt="Extradimensional Sphere" action="Action" usage="1/Long Rest">
+			<description>Choose a point you can see within 40 feet of you. Any creature entirely within a 15-foot radius of that point must succeed on a DC{{sorcerer:spellcasting:dc}} Dexterity saving throw or take 3d10 force damage and be absorbed into this extradimensional hole. Any objects of Large size or smaller than aren't being worn, carried, or secured to anything are absorbed into this hole. The hole then disappears at the end of your turn. &#13;
+			At the start of your next turn, choose another point you can see within 40 feet of you. Any creatures and objects that were absorbed into the previous hole you created are ejected within a 15-foot radius of this point, landing in an unoccupied space of your choice within the radius. If there are no unoccupied spaces within this radius, they instead land in the closest unoccupied spaces to this radius. &#13;
+			When choosing a point to create the sphere, you can instead choose a creature affected by your Planetary Imitation. Doing so automatically absorbs them into the abyss without taking any damage, and the gravitational pull increases to a 30-foot radius from the point where the creature had been previously.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Wish Upon a Star" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_WISH_UPON_A_STAR">
+		<description>
+			<p>At 18th level, you can call upon your otherworldly lineage to aid you. Whenever you would start a long rest in which you can see the sky, roll a d20. Until the start of your next long rest, you gain one of the following benefits:</p>
+			<p class="indent"><b>1-15.</b> You can cast the <i>Melf's Minute Meteors</i> spell as a 5th level spell without expending a spell slot. When cast in this way, your concentration on the spell can't be broken.</p>
+			<p class="indent"><b>16-18.</b> You can cast the <i>Meteor Swarm</i> spell by expending 7 sorcery points. When doing so, you evoke just one orb of fire, rather than four.</p>
+			<p class="indent"><b>19-20.</b> You can cast the <i>Wish</i> spell without expending a spell slot. When doing so, you can only use it to duplicate any spell of 7th level or lower. You don't need to meet any requirements in that spell, include costly components, as the spell simply takes effect.</p>
+		</description>
+		<sheet alt="Wish Upon A Star">
+			<description>Whenever you would start a long rest in which you can see the sky, roll a d20. Until the start of your next long rest, you gain one of the following benefits: &#13;
+				•1-15. You can cast the Melf's Minute Meteors spell as a 5th level spell without expending a spell slot. When cast in this way, your concentration on the spell can't be broken. &#13;
+				•16-18. You can cast the Meteor Swarm spell by expending 7 sorcery points. When doing so, you evoke just one orb of fire, rather than four. &#13;
+				•19-20. You can cast the Wish spell without expending a spell slot. When doing so, you can only use it to duplicate any spell of 7th level or lower. You don't need to meet any requirements in that spell, include costly components, as the spell simply takes effect.</description>
+		</sheet>
+	</element>
+
+	<append id="ID_PHB_SPELL_GUIDING_BOLT">
+		<supports>Guiding Bolt</supports>
+	</append>
+	<append id="ID_WOTC_EGTW_SPELL_MAGNIFY_GRAVITY">
+		<supports>Magnify Gravity</supports>
+	</append>
+	<append id="ID_PHB_SPELL_MOONBEAM">
+		<supports>Moonbeam</supports>
+	</append>
+	<append id="ID_PHB_SPELL_SILENCE">
+		<supports>Silence</supports>
+	</append>
+	<append id="ID_PHB_SPELL_HYPNOTIC_PATTERN">
+		<supports>Hypnotic Pattern</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_MELFS_MINUTE_METEORS">
+		<supports>Melfs Minute Meteors</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BANISHMENT">
+		<supports>Banishment</supports>
+	</append>
+	<append id="ID_WOTC_EGTW_SPELL_GRAVITY_SINKHOLE">
+		<supports>Gravity Sinkhole</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_DAWN">
+		<supports>Dawn</supports>
+	</append>
+	<append id="ID_WOTC_EGTW_SPELL_TEMPORAL_SHUNT">
+		<supports>Temporal Shunt</supports>
+	</append>
+
+</elements>
