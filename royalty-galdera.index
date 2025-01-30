@@ -4,7 +4,7 @@
 		<name>Royalty’s Galdera Collection</name>
 		<description>A collection of personal homebrew created by Royalty for his Galdera setting.</description>
 		<author>"Royalty"</author>
-		<update version="1.1">
+		<update version="1.2">
 			<file name="royalty-galdera.index" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/royalty-galdera.index" />
 		</update>
 	</info>
@@ -32,8 +32,8 @@
 	<!-- Rogue -->
 
 	<!-- Sorcerer -->
-		<file name="roy-sorcerer-auroral.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-sorcerer-auroral.xml" />
-		<file name="roy-sorcerer-cosmic-body.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-sorcerer-cosmic-body.xml" />
+		<file name="roy-sorcerer-auroral.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-auroral.xml" />
+		<file name="roy-sorcerer-cosmic-body.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-cosmic-body.xml" />
 
 	<!-- Warlock -->
 
