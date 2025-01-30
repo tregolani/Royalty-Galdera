@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>Royalty’s Galdera Collection</name>
+		<description>A collection of personal homebrew created by Royalty for his Galdera setting.</description>
+		<author>"Royalty"</author>
+		<update version="1.0">
+			<file name="royalty-galdera.index" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/royalty-galdera.index" />
+		</update>
+	</info>
+	<files>
+		<file name="roy-galdera-source.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-galdera-source.xml" />
+
+	<!-- Artificer -->
+
+	<!-- Barbarian -->
+
+	<!-- Bard -->
+
+	<!-- Cleric -->
+
+	<!-- Druid -->
+
+	<!-- Fighter -->
+
+	<!-- Monk -->
+
+	<!-- Paladin -->
+
+	<!-- Ranger -->
+
+	<!-- Rogue -->
+
+	<!-- Sorcerer -->
+		<file name="roy-sorcerer-auroral.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-sorcerer-auroral.xml" />
+
+	<!-- Warlock -->
+
+	<!-- Wizard -->
+
+	</files>
+</index>

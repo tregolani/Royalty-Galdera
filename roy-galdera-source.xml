@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.1">
+			<file name="roy-galdera-source.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-galdera-source.xml" />
+		</update>
+	</info>
+	<element name="Royalty’s Galdera Collection" type="Source" source="Core" id="ID_ROY_GALDERA_SOURCE">
+		<description>
+        <![CDATA[<p>This is a collection of personal homebrew created by Royalty for his Galdera setting.</p>]]>
+      </description>
+		<setters>
+			<set name="abbreviation">ROYGALD</set>
+			<set name="author">Royalty</set>
+			<set name="url">https://www.gmbinder.com/share/-N1PJzMjpLIAETXq-Dlm</set>
+			<set name="official">false</set>
+			<set name="supplement">true</set>
+			<set name="release">20250129</set>
+		</setters>
+	</element>
+</elements> 
