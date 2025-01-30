@@ -4,8 +4,8 @@
 		<name>Cosmic Body</name>
 		<description>The Cosmic Body Subclass from Royalty for the Galdera Setting.</description>
 		<author>Royalty</author>
-		<update version="0.1">
-			<file name="roy-sorcerer-cosmic-body.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-sorcerer-cosmic-body.xml" />
+		<update version="0.1.1">
+			<file name="roy-sorcerer-cosmic-body.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-cosmic-body.xml" />
 		</update>
 	</info>
 
