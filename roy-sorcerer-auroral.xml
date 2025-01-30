@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Auroral Bloodline</name>
+		<description>The Auroral Bloodline from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1.1">
+			<file name="roy-sorcerer-auroral.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/roy-sorcerer-auroral.xml" />
+		</update>
+	</info>
+
+	<element name="Auroral Bloodline" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_AURORAL_BLOODLINE">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>Your glowing blood is tied to the bright beacons from the north and south. Perhaps you were born upon the coldest of nights the world has seen in centuries, perhaps you come from a family with a lineage of worshiping the auroras, or perhaps you were born with a heart of magical ice rather than one of flesh. Sorcerers who use such powers for good are perfect creatures against the forces of fire and darkness. Others are known as "Will o Wisps" due to their charming and bright appearances, only to lead others to a frigid death.</p>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_AURORAL_SPIRIT_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_HEART_OF_ICE_AND_SNOW" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_CHILLING_MAGIC" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_FROZEN_BLOOD" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_BLINDING_AURORA" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_ICY_STEPS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_SOUL_OF_THE_WINTER_LIGHTS" />
+		</description>
+		<sheet display="false">
+			<description>Your glowing blood is tied to the bright celestial beacons from the north and south.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_AURORAL_SPIRIT_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_HEART_OF_ICE_AND_SNOW" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_CHILLING_MAGIC" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_FROZEN_BLOOD" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_BLINDING_AURORA" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_ICY_STEPS" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_SOUL_OF_THE_WINTER_LIGHTS" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Auroral Spirit Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_AURORAL_SPIRIT_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or divination spell from the druid, sorcerer, or warlock spell list.</p>
+			<h5 class="caption">Auroral Spirit Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Faerie Fire, Frost Fingers</em></td></tr>
+					<tr><td>3rd</td><td><em>Rime's Binding Ice, Warding Wind</em></td></tr>
+					<tr><td>5th</td><td><em>Hypnotic Pattern, Sleet Storm</em></td></tr>
+					<tr><td>7th</td><td><em>Ice Storm, Sickening Radiance</em></td></tr>
+					<tr><td>9th</td><td><em>Cone of Cold, Wall of Light</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Auroral Spirit Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or divination spell from the druid, sorcerer, or warlock spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Auroral Spirit Spells" supports="1,(Evocation||Divination),(($(spellcasting:list))||Druid||Warlock||Frost Fingers)" level="1" default="ID_WOTC_IDROTF_SPELL_FROST_FINGERS" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="1,(Evocation||Divination),(($(spellcasting:list))||Druid||Warlock||Faerie Fire)" level="1" default="ID_PHB_SPELL_FAERIE_FIRE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="2,(Evocation||Divination),(($(spellcasting:list))||Druid||Warlock||Rimes Binding Ice)" level="3" default="ID_WOTC_FTOD_SPELL_RIMES_BINDING_ICE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="2,(Evocation||Divination),(($(spellcasting:list))||Druid||Warlock||Warding Wind)" level="3" default="ID_XGTE_SPELL_WARDING_WIND" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="3,(Evocation||Divination||Hypnotic Pattern),(($(spellcasting:list))||Druid||Warlock||Hypnotic Pattern)" level="5" default="ID_PHB_SPELL_HYPNOTIC_PATTERN" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="3,(Evocation||Divination||Sleet Storm),(($(spellcasting:list))||Druid||Warlock||Sleet Storm)" level="5" default="ID_PHB_SPELL_SLEET_STORM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="4,(Evocation||Divination),(($(spellcasting:list))||Druid||Warlock||Ice Storm)" level="7" default="ID_PHB_SPELL_ICE_STORM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="4,(Evocation||Divination),(($(spellcasting:list))||Druid||Warlock||Sickening Radiance)" level="7" default="ID_XGTE_SPELL_SICKENING_RADIANCE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="5,(Evocation||Divination),(($(spellcasting:list))||Druid||Warlock||Cone of Cold)" level="9" default="ID_PHB_SPELL_CONE_OF_COLD" spellcasting="Sorcerer" />
+			<select type="Spell" name="Auroral Spirit Spells" supports="5,(Evocation||Divination),(($(spellcasting:list))||Druid||Warlock||Wall of Light)" level="9" default="ID_XGTE_SPELL_WALL_OF_LIGHT" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Heart of Ice and Snow" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_HEART_OF_ICE_AND_SNOW">
+		<description>
+		<p>Upon choosing this bloodline at 1st level, you have awakened the inner cold inside your body. This provides you the following benefits:</p>
+		<ul>
+			<li>You learn the <i>Dancing Lights</i> spell, which doesn’t count against the number of sorcerer cantrips you know. When you cast the spell, you can create additional lights equal to your proficiency bonus.</li>
+			<li>You are acclimated to high altitude, including elevations above 20,000 feet.</li>
+			<li>You can walk on snow without leaving footsteps, and can walk across snow and ice as if it was solid ground.</li>
+		</ul>
+		</description>
+		<sheet alt="Heart of Ice and Snow">
+			<description>You are acclimated to high altitude, including elevations above 20,000 feet. &#13;
+			You can walk on snow without leaving footsteps, and can walk across snow and ice as if it was solid ground. &#13;
+			Your Dancing Lights cantrip can generate {{proficiency}} extra lights.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DANCING_LIGHTS" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Chilling Magic" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_CHILLING_MAGIC">
+		<description>
+			<p>Also at 1st level, your spells carry frost and snow wherever they go. When you cast a spell of 1st level or higher that affects one or more creatures, you can cause an amount of creatures equal to your proficiency bonus to make a Constitution saving throw using your spell save DC. On a failure, a creature is chilled to the bone, and their movement speed is halved until the end of your next turn.</p>
+		</description>
+		<sheet alt="Chilling Magic">
+			<description>When you cast a spell of 1st level or higher that affects one or more creatures, you can cause up to {{proficiency}} of those creatures to make a DC{{sorcerer:spellcasting:dc}} Constitution saving throw. On a failure, a creature is chilled to the bone, and their movement speed is halved until the end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Frozen Blood" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_FROZEN_BLOOD">
+		<description>
+			<p>Upon reaching 6th level, you gain resistance to cold damage.</p>
+			<p class="indent">Additionally, whenever you cast a spell that creates light, deals cold damage, or creates difficult terrain, you can apply a Metamagic you know without consuming sorcery points. You can do so a number of times equal to your proficiency bonus, and you regain all expended uses after finishing a long rest.</p>
+		</description>
+		<sheet alt="Frozen Blood" usage="{{proficiency}}/Long Rest">
+			<description>Whenever you cast a spell that creates light, deals cold damage, or creates difficult terrain, you can apply a Metamagic you know without consuming sorcery points.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+		</rules>
+	</element>
+
+	<element name="Level 14: Blinding Aurora" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_BLINDING_AURORA">
+		<description>
+			<p>At 14th level, aurora lights course out your body when you are hurt. Upon taking damage, you can spend a reaction to cause any creature within 10 feet of you to make a Constitution saving throw against your spell save DC. On a failure, they are blinded until the end of their next turn.</p>
+			<p class="indent">A creature that succeeds this save is immune to this feature until you finish a long rest.</p>
+		</description>
+		<sheet alt="Blinding Aurora" action="Reaction">
+			<description>Upon taking damage, you can cause any creature within 10 feet of you to make a DC{{sorcerer:spellcasting:dc}} Constitution saving throw. On a failure, they are blinded until the end of their next turn. &#13;
+			A creature that succeeds this save is immune to this feature until you finish a long rest.</description>
+		</sheet>
+	</element>
+	<element name="Level 14: Icy Steps" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_ICY_STEPS">
+		<description>
+			<p>Starting at 14th level, you are always under the effects of the <i>Water Walk</i> spell. You can dismiss and reactivate this effect as a bonus action.</p>
+			<p class="indent">Moving across liquid surfaces in this way creates a trail of ice, to which friendly creatures can walk on safely and without any penalties. This ice lasts for a minute, or until the end of your next turn if it made over a hot or burning surface.</p>
+		</description>
+		<sheet alt="Icy Steps">
+			<description>You are always under the effects of the Water Walk spell. You can dismiss and reactivate this effect as a bonus action. &#13;
+			Moving across liquid surfaces in this way creates a trail of ice, to which friendly creatures can walk on safely and without any penalties. This ice lasts for a minute, or until the end of your next turn if it made over a hot or burning surface.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Soul of the Winter Lights" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_AURORAL_SOUL_OF_THE_WINTER_LIGHTS">
+		<description>
+			<p>At 18th level, you gain immunity to cold damage, and can’t have your movement speed reduced in any way.</p>
+			<p class="indent">You can also use your bonus action to become a living aspect of the northern and southern lights. For the next minute, you emit bright light in a 15-foot radius, and dim light for an additional 15 feet. Friendly creatures gain the following benefits while inside these lights:</p>
+			<ul>
+				<li>They gain resistance to cold damage.</li>
+				<li>They have advantage on the first attack roll they make on each of their turns.</li>
+				<li>They have advantage on saving throws against being blinded or having their movement speed reduced.</li>
+				<li>They gain a flying speed equal to your walking speed and can hover. This flight only works within the lighted area, and creatures flying in this way fall if they leave the area.</li>
+			</ul>
+			<p>Once you have used this feature, you can’t use it again until you finish a long rest, or until you spend 5 sorcery points to regain a use.</p>
+		</description>
+		<sheet alt="Soul of the Winter Lights" action="Bonus Action" usage="1/Long Rest">
+			<description>You can become the living aspect of the northern and southern lights. For the next minute, you emit bright light in a 15-foot radius, and dim light for an additional 15 feet. Friendly creatures gain the following benefits while inside these lights: &#13;
+				•They gain resistance to cold damage.&#13;
+				•They have advantage on the first attack roll they make on each of their turns.&#13;
+				•They have advantage on saving throws against being blinded or having their movement speed reduced.&#13;
+				•They gain a flying speed equal to your walking speed and can hover. Creatures flying in this way fall if they leave the area.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" />
+		</rules>
+		</element>
+
+	<append id="ID_WOTC_IDROTF_SPELL_FROST_FINGERS">
+		<supports>Frost Fingers</supports>
+	</append>
+	<append id="ID_PHB_SPELL_FAERIE_FIRE">
+		<supports>Faerie Fire</supports>
+	</append>
+	<append id="ID_WOTC_FTOD_SPELL_RIMES_BINDING_ICE">
+		<supports>Rimes Binding Ice</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_WARDING_WIND">
+		<supports>Warding Wind</supports>
+	</append>
+	<append id="ID_PHB_SPELL_HYPNOTIC_PATTERN">
+		<supports>Hypnotic Pattern</supports>
+	</append>
+	<append id="ID_PHB_SPELL_SLEET_STORM">
+		<supports>Sleet Storm</supports>
+	</append>
+	<append id="ID_PHB_SPELL_ICE_STORM">
+		<supports>Ice Storm</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_SICKENING_RADIANCE">
+		<supports>Sickening Radiance</supports>
+	</append>
+	<append id="ID_PHB_SPELL_CONE_OF_COLD">
+		<supports>Cone of Cold</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_WALL_OF_LIGHT">
+		<supports>Wall of Light</supports>
+	</append>
+
+</elements>
