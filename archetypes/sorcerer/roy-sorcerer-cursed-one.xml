@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Cursed One</name>
+		<description>The Cursed One Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1">
+			<file name="roy-sorcerer-cursed-one.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-cursed-one.xml" />
+		</update>
+	</info>
+
+	<element name="Cursed One" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_CURSED_ONE">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>Some sorcerers may find their awakened magical lineage a blessing, while others may see it as a curse placed upon them. To others, their magical lineage comes from curses. Be it due to a vile act your ancestor committed ages ago, a cursed artifact they took, or the vengeance of their enemy's dying breath, the end result brought you to be a creatures touched with curses and misery. How you handle this power is up to you; do you strive to aid and prevent the spread of curses, or do you wish to invoke your wrath upon the world through hexes and maledictions?</p>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_CURSED_ONE_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_CURSE_DEVOURER" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_VERSATILE_MALEDICTIONS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_DESPITE_THE_ODDS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_RECIPROCAL_CURSE" />
+		</description>
+		<sheet display="false">
+			<description>Your magic stems from vile curses and insidious hexes.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_CURSED_ONE_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_CURSE_DEVOURER" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_VERSATILE_MALEDICTIONS" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_DESPITE_THE_ODDS" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_RECIPROCAL_CURSE" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Cursed One Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_CURSED_ONE_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or necromancy spell from the sorcerer, wizard, or warlock spell list.</p>
+			<h5 class="caption">Cursed One Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Bane, Hex</em></td></tr>
+					<tr><td>3rd</td><td><em>Blindness/Deafness, Lesser Restoration</em></td></tr>
+					<tr><td>5th</td><td><em>Bestow Curse, Remove Curse</em></td></tr>
+					<tr><td>7th</td><td><em>Blight, Confusion</em></td></tr>
+					<tr><td>9th</td><td><em>Contagion, Greater Restoration</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Cursed One Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or necromancy spell from the sorcerer, wizard, or warlock spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Cursed One Spells" supports="1,(Enchantment||Necromancy||Bane),(($(spellcasting:list))||Wizard||Warlock||Bane)" level="1" default="ID_PHB_SPELL_BANE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="1,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Hex)" level="1" default="ID_PHB_SPELL_HEX" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="2,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Blindness Deafness)" level="3" default="ID_PHB_SPELL_BLINDNESS_DEAFNESS" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="2,(Enchantment||Necromancy||Lesser Restoration),(($(spellcasting:list))||Wizard||Warlock||Lesser Restoration)" level="3" default="ID_PHB_SPELL_LESSER_RESTORATION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="3,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Bestow Curse)" level="5" default="ID_PHB_SPELL_BESTOW_CURSE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="3,(Enchantment||Necromancy||Remove Curse),(($(spellcasting:list))||Wizard||Warlock||Remove Curse)" level="5" default="ID_PHB_SPELL_REMOVE_CURSE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="4,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Blight)" level="7" default="ID_PHB_SPELL_BLIGHT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="4,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Confusion)" level="7" default="ID_PHB_SPELL_CONFUSION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="5,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Contagion)" level="9" default="ID_PHB_SPELL_CONTAGION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Cursed One Spells" supports="5,(Enchantment||Necromancy||Greater Restoration),(($(spellcasting:list))||Wizard||Warlock||Greater Restoration)" level="9" default="ID_PHB_SPELL_GREATER_RESTORATION" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Curse Devourer" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_CURSE_DEVOURER">
+		<description>
+		<p>Upon choosing this bloodline at 1st level, you can absorb the bad luck from other creatures. When another creature you can see within 60 feet of you is about to roll a d20 with disadvantage, you can use your reaction to instead have them roll with advantage. Doing so causes you to gain an amount of temporary hit points equal to 1d6 + your sorcerer level, but your next d20 roll is rolled with disadvantage.</p>
+		<p class="indent">While you have disadvantage in this way, you can't use this feature again until you roll a d20 roll, nor can you negate this disadvantage with advantage.</p>
+		</description>
+		<sheet alt="Curse Devourer" action="Reaction" >
+			<description>When another creature you can see within 60 feet of you is about to roll a d20 with disadvantage, you can instead have them roll with advantage. You then gain 1d6+{{level:sorcerer}} temporary hit points, and your next d20 roll is rolled with disadvantage, which cannot be negated in any way. &#13;
+			You can't use this feature again until you roll a d20 roll with that disadvantage.</description>
+		</sheet>
+	</element>
+	
+	<element name="Level 6: Versatile Maledictions" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_VERSATILE_MALEDICTIONS">
+		<description>
+			<p>Starting at 6th level, your lineage innately aids you against new curses. You are immune to the <i>Hex</i> spell and curses from magical items.</p>
+			<p class="indent">Additionally, you gain the following abilities:</p>
+			<ul>
+				<li>When you would fail to affect a creature with a spell from your Cursed One Spells feature, you can immediately choose to target a different creature within range as a reaction.</li>
+				<li>When a creature would target you with a spell or magical effect that can be ended via the Remove Curse spell, you can use your reaction to turn the effect back at them. Doing so causes the creature to be affected by the effect as though it originated from you, and you use your sorcerer spell save DC as the effect's new DC (if any).</li>
+				<li>If you are attuned to a cursed magic item, you can spend an action to force a creature within 30 feet of you to make a Charisma saving throw. On a failed save, they are affected by the item's curse as if they were attuned to the item. This lasts for up to an hour, or when Remove Curse is cast on the target.</li>
+			</ul>
+			<p>Once you have used one of these abilities, you can't use it again until you finish a long rest.</p>
+		</description>
+		<sheet alt="Versatile Maledictions" usage="1/Long Rest">
+			<description>You are immune to the Hex spell and curses from magical items. Additionally, you gain the following abilities: &#13;
+			• When you would fail to affect a creature with a spell from your Cursed One Spells feature, you can immediately choose to target a different creature within range as a reaction. &#13;
+			• When a creature would target you with a spell or magical effect that can be ended via the Remove Curse spell, you can use your reaction to turn the effect back at them. Doing so causes the creature to be affected by the effect as though it originated from you, and you use your sorcerer spell save DC as the effect's new DC (if any). &#13;
+			• If you are attuned to a cursed magic item, you can spend an action to force a creature within 30 feet of you to make a DC{{sorcerer:spellcasting:dc}} Charisma saving throw. On a failed save, they are affected by the item's curse as if they were attuned to the item for the next hour or until Reomove Curse is cast upon the target.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Despite the Odds" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_DESPITE_THE_ODDS">
+		<description>
+			<p>At 14th level, you reap the rewards when you overcome your cursed life.</p>
+			<ul>
+				<li>You are immune to the <i>Bestow Curse</i> spell.</li>
+				<li>If you make an attack roll with disadvantage and hit, you roll an additional amount of damage die equal to half your proficiency bonus.</li>
+				<li>If you make a saving throw with disadvantage and succeed, you take no damage from the effect.</li>
+				<li>If you make a concentration saving throw with disadvantage and succeed, your concentration cannot be broken for the next minute, or until the spell ends. You must be concentrating on a spell from your Cursed One Spells feature in order to gain this benefit.</li>
+			</ul>
+		</description>
+		<sheet alt="Despite the Odds" >
+			<description>You are immune to the Bestow Curse spell. &#13;
+			If you make an attack roll with disadvantage and hit, you roll {{proficiency:half}} additional damage dice and add it to the total dealt. &#13;
+			If you make a saving throw with disadvantage and succeed, you take no damage from the effect. &#13;
+			If you make a concentration saving throw on one of your Cursed One Spells with disadvantage and succeed, your concentration cannot be broken for the next minute, or until the spell ends.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Reciprocal Curse" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_RECIPROCAL_CURSE">
+		<description>
+			<p>At 18th level, you know how to share any banes you may have. When a creature would cause you to suffer a condition, you can spend 2 sorcery points to have them suffer the same condition until you no longer suffer from that condition.</p>
+			<p class="indent">Additionally, you are immune to any effects that can be ended via the <i>Remove Curse</i> spell.</p>
+		</description>
+		<sheet alt="Reciprocal Curse">
+			<description>When a creature would cause you to suffer a condition, you can spend 2 sorcery points to have them suffer the same condition until you no longer suffer from that condition. &#13;
+			Additionally, you are immune to any effects that can be ended via the Remove Curse spell.</description>
+		</sheet>
+	</element>
+
+	<append id="ID_PHB_SPELL_BANE">
+		<supports>Bane</supports>
+	</append>
+	<append id="ID_PHB_SPELL_HEX">
+		<supports>Hex</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BLINDNESS_DEAFNESS">
+		<supports>Blindness Deafness</supports>
+	</append>
+	<append id="ID_PHB_SPELL_LESSER_RESTORATION">
+		<supports>Lesser Restoration</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BESTOW_CURSE">
+		<supports>Bestow Curse</supports>
+	</append>
+	<append id="ID_PHB_SPELL_REMOVE_CURSE">
+		<supports>Remove Curse</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BLIGHT">
+		<supports>Blight</supports>
+	</append>
+	<append id="ID_PHB_SPELL_CONFUSION">
+		<supports>Confusion</supports>
+	</append>
+	<append id="ID_PHB_SPELL_CONTAGION">
+		<supports>Contagion</supports>
+	</append>
+	<append id="ID_PHB_SPELL_GREATER_RESTORATION">
+		<supports>Greater Restoration</supports>
+	</append>
+
+</elements>

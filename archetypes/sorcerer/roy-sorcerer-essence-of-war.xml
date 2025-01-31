@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Essence of War</name>
+		<description>The Essence of War Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1">
+			<file name="roy-sorcerer-essence-of-war.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-essence-of-war.xml" />
+		</update>
+	</info>
+
+	<element name="Essence of War" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_ESSENCE_OF_WAR">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>Your lineage is one of bloodshed, combat, and conquest. Wherever you go, death and conflict follows, or perhaps you use your bloodline to hunt down those who seek senseless conflict. Perhaps you were born on the battlefield, a descendant of a great berserker or general, or you were the gift from a god of war to its devotees. No matter the ancestry, you are a living embodiment of combat.</p>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_WAR_EXPANDED_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_BORN_FOR_WAR" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_SOUL_BLADE" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_CROSSED_BLADES" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_BLOODIED_MAGIC" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_RAIN_OF_WEAPONS" />
+		</description>
+		<sheet display="false">
+			<description>Your lineage is one of bloodshed, combat, and conquest; the living embodiment of combat.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_WAR_EXPANDED_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_BORN_FOR_WAR" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_SOUL_BLADE" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_CROSSED_BLADES" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_BLOODIED_MAGIC" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_RAIN_OF_WEAPONS" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: War Expanded Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_WAR_EXPANDED_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the paladin or sorcerer spell list.</p>
+			<h5 class="caption">War Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Heroism, Wrathful Smite</em></td></tr>
+					<tr><td>3rd</td><td><em>Shadow Blade, Spiritual Weapon</em></td></tr>
+					<tr><td>5th</td><td><em>Blinding Smite, Spirit Shroud</em></td></tr>
+					<tr><td>7th</td><td><em>Death Ward, Staggering Smite</em></td></tr>
+					<tr><td>9th</td><td><em>Holy Weapon, Steel Wind Strike</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="War Expanded Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the paladin or sorcerer spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="War Spells" supports="1,(Evocation||Transmutation||Heroism),(($(spellcasting:list))||Paladin)" level="1" default="ID_PHB_SPELL_HEROISM" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="1,(Evocation||Transmutation||Wrathful Smite),(($(spellcasting:list))||Paladin)" level="1" default="ID_PHB_SPELL_WRATHFUL_SMITE" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="2,(Evocation||Transmutation||Shadow Blade),(($(spellcasting:list))||Paladin)" level="3" default="ID_XGTE_SPELL_SHADOW_BLADE" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="2,(Evocation||Transmutation||Spiritual Weapon),(($(spellcasting:list))||Paladin||Spiritual Weapon)" level="3" default="ID_PHB_SPELL_SPIRITUAL_WEAPON" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="3,(Evocation||Transmutation||Blinding Smite),(($(spellcasting:list))||Paladin)" level="5" default="ID_PHB_SPELL_BLINDING_SMITE" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="3,(Evocation||Transmutation||Spirit Shroud),(($(spellcasting:list))||Paladin||Spirit Shroud)" level="5" default="ID_WOTC_TCOE_SPELL_SPIRIT_SHROUD" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="4,(Evocation||Transmutation||Death Ward),(($(spellcasting:list))||Paladin)" level="7" default="ID_PHB_SPELL_DEATH_WARD" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="4,(Evocation||Transmutation||Blinding Smite),(($(spellcasting:list))||Paladin)" level="7" default="ID_PHB_SPELL_STAGGERING_SMITE" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="5,(Evocation||Transmutation||Holy Weapon),(($(spellcasting:list))||Paladin)" level="9" default="ID_XGTE_SPELL_HOLY_WEAPON" spellcasting="Sorcerer" />
+			<select type="Spell" name="War Spells" supports="5,(Evocation||Transmutation||Steel Wind Strike),(($(spellcasting:list))||Paladin||Steel Wind Strike)" level="9" default="ID_XGTE_SPELL_STEEL_WIND_STRIKE" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Born for War" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_BORN_FOR_WAR">
+		<description>
+		<p>Your body was made for conflict. While you are unarmored, your Armor Class equals 13 + your Dexterity modifier.</p>
+		</description>
+		<sheet alt="Born for War" >
+			<description>While you are unarmored, your Armor Class is {{ac:born for war}}.</description>
+		</sheet>
+		<rules>
+			<stat name="ac:born for war" value="13" />
+			<stat name="ac:born for war" value="dexterity:modifier" />
+			<stat name="ac:calculation" value="ac:born for war" bonus="calculation" equipped="[armor:none]" alt="Born for War (Sorcerer)" />
+		</rules>
+	</element>
+	<element name="Level 1: Soul Blade"	type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_SOUL_BLADE">
+		<description>
+		<p>Also at 1st level, you can manifest your bloodline into a weapon. As a bonus action, choose a weapon within 30 feet of you that you can see. For the next minute, any creature wielding this weapon gains the following benefits:</p>
+		<ul>
+			<li>They are proficient with this weapon, and use their highest ability modifier for its attack and damage rolls.</li>
+			<li>They treat this weapon as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.</li>
+			<li>When another creature wields this weapon, you can make them the target of any spell you cast with a range of Self.</li>
+			<li>Once per turn, a creature can reroll a missed attack with this weapon, and must the new roll.</li>
+		</ul>
+		<p>You can instead choose to create a weapon of your choice with this feature for its duration, so long as you have hands to wield it. This feature ends early if you are incapacitated, or if you dismiss it (no action required). You can use this feature a number of times equal to your proficiency bonus, and regain all expended uses after a long rest.</p>
+		</description>
+		<sheet alt="Soul Blade" action="Bonus Action" usage="{{proficiency}}/Long Rest" >
+			<description>Choose a weapon you can see within 30 feet of you, or create a weapon of your choice. For the next minute, any creature wielding this weapon gains the following benefits: &#13;
+			•They are proficient with the weapon and can use their highest ability modifier for its attack and damage rolls. &#13;
+			•The weapon is magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. &#13;
+			•When another creature wields this weapon, you can make them the target of any spell you cast with a range of Self. &#13;
+			•Once per turn, they can reroll a missed attack with this weapon, and must the new roll.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Crossed Blades" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_CROSSED_BLADES">
+		<description>
+			<p>At 6th level, you can use a use of your Soul Blade feature to both create a weapon of your choice and to empower one within range. Furthermore, any creature wielding these weapons can attack twice, instead of once, whenever they take the attack action on their turn so long as the attacks are made with it.</p>
+		</description>
+		<sheet alt="Crossed Blades" >
+			<description>Any creature wielding one of your Soul Blades can attack twice instead of once whenever they take the attack action on their turn, so long as the attacks are made with the Soul Blade.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Bloodied Magic" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_BLOODIED_MAGIC">
+		<description>
+			<p>At 14th level, you gain the Empowered Spell Metamagic if you didn't already. Furthermore, each time you cast a spell that performs or requires an attack roll, you can use the Empowered Spell Metamagic at no cost.</p>
+		</description>
+		<sheet alt="Bloodied Magic" >
+			<description>Whenever you cast a spell that performs or requires an attack roll, you can use the Empowered Spell Metamagic at no cost.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Bloodied Magic" supports="Metamagic" default="ID_WOTC_PHB_CLASS_FEATURE_SORCERER_METAMAGIC_EMPOWERED_SPELL" />
+		</rules>
+	</element>
+
+	<element name="Level 18: Rain of Weapons" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_RAIN_OF_WEAPONS">
+		<description>
+			<p>Upon reaching 18th level, you have become a true aspect of war, allowing you to manifest and fire an army's worth of weapons. As an action, choose a point you can see within 300 feet of you. All creatures of your choice within a 100-foot radius of that point must make a Dexterity saving throw as a rain of magical weapons bombards the area. On a failed save, a creature takes 8d12 bludgeoning, piercing, or slashing damage (your choice), or half as much on a success.</p>
+			<p class="indent">Once you have used this feature, you can't use it again until you finish a long rest.</p>
+		</description>
+		<sheet alt="Rain of Weapons" action="Action" usage="1/Long Rest">
+			<description>Choose a point you can see within 300 feet of you. All creatures of your choice within a 100-foot radius of that point must make a DC{{sorcerer:spellcasting:dc}} Dexterity saving throw as a rain of magical weapons bombards the area. On a failed save, a creature takes 8d12 bludgeoning, piercing, or slashing damage (your choice), or half as much on a success.</description>
+		</sheet>
+	</element>
+
+	<append id="ID_PHB_SPELL_HEROISM">
+		<supports>Heroism</supports>
+	</append>
+	<append id="ID_PHB_SPELL_WRATHFUL_SMITE">
+		<supports>Wrathful Smite</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_SHADOW_BLADE">
+		<supports>Shadow Blade</supports>
+	</append>
+	<append id="ID_PHB_SPELL_SPIRITUAL_WEAPON">
+		<supports>Spiritual Weapon</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BLINDING_SMITE">
+		<supports>Blinding Smite</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_SPELL_SPIRIT_SHROUD">
+		<supports>Spirit Shroud</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DEATH_WARD">
+		<supports>Death Ward</supports>
+	</append>
+	<append id="ID_PHB_SPELL_STAGGERING_SMITE">
+		<supports>Staggering Smite</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_HOLY_WEAPON">
+		<supports>Holy Weapon</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_STEEL_WIND_STRIKE">
+		<supports>Steel Wind Strike</supports>
+	</append>
+
+</elements>

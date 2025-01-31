@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Heroic Spirit</name>
+		<description>The Heroic Spirit Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1">
+			<file name="roy-sorcerer-heroic-spirit.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-heroic-spirit.xml" />
+		</update>
+	</info>
+
+	<element name="Heroic Spirit" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_HEROIC_SPIRIT">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>You share your lineage with heroes that have shaped history. Their authority and knowledge flows through you, allowing you to carve your way towards greatness. You might have not known of your heritage, or perhaps your family has been waiting for a proper descendant for their heroic lineage. Through tenacity and progress, perhaps you will yourself greater than your source of magic.</p>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_HEROIC_EXPANDED_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_POWERFUL_AUTHORITY" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_RESILIENT_SPIRIT" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_EXPERIENCE_AGAINST_ADVERSITY" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_HEROIC_PRESENCE" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_SPIRIT_OF_THE_CHOSEN" />
+		</description>
+		<sheet display="false">
+			<description>The authority and knowledge of the heroes of history flows through you.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_HEROIC_EXPANDED_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_POWERFUL_AUTHORITY" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_RESILIENT_SPIRIT" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_EXPERIENCE_AGAINST_ADVERSITY" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_HEROIC_PRESENCE" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_SPIRIT_OF_THE_CHOSEN" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Heroic Expanded Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_HEROIC_EXPANDED_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or transmutation spell from the bard or sorcerer spell list.</p>
+			<h5 class="caption">Heroic Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Heroism, Sanctuary</em></td></tr>
+					<tr><td>3rd</td><td><em>Aid, Enthrall</em></td></tr>
+					<tr><td>5th</td><td><em>Beacon of Hope, Motivational Speech</em></td></tr>
+					<tr><td>7th</td><td><em>Find Greater Steed, Mordenkainen’s Private Sanctum</em></td></tr>
+					<tr><td>9th</td><td><em>Circle of Power, Legend Lore</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Heroic Expanded Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or transmutation spell from the bard or sorcerer spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Heroic Spells" supports="1,(Enchantment||Transmutation),(($(spellcasting:list))||Bard||Heroism)" level="1" default="ID_PHB_SPELL_HEROISM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="1,(Enchantment||Transmutation||Sanctuary),(($(spellcasting:list))||Bard||Sanctuary)" level="1" default="ID_PHB_SPELL_SANCTUARY" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="2,(Enchantment||Transmutation||Aid),(($(spellcasting:list))||Bard||Aid)" level="3" default="ID_PHB_SPELL_AID" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="2,(Enchantment||Transmutation||Enthrall),(($(spellcasting:list))||Bard)" level="3" default="ID_PHB_SPELL_ENTHRALL" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="3,(Enchantment||Transmutation||Beacon of Hope),(($(spellcasting:list))||Bard||Beacon of Hope)" level="5" default="ID_PHB_SPELL_BEACON_OF_HOPE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="3,(Enchantment||Transmutation||Motivational Speech),(($(spellcasting:list))||Bard||Motivational Speech)" level="5" default="ID_WOTC_ACQINC_SPELL_MOTIVATIONAL_SPEECH" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="4,(Enchantment||Transmutation||Find Greater Steed),(($(spellcasting:list))||Bard||Find Greater Steed)" level="7" default="ID_XGTE_SPELL_FIND_GREATER_STEED" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="4,(Enchantment||Transmutation||Private Sanctum),(($(spellcasting:list))||Bard||Private Sanctum)" level="7" default="ID_PHB_SPELL_MORDENKAINENS_PRIVATE_SANCTUM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="5,(Enchantment||Transmutation||Circle of Power),(($(spellcasting:list))||Bard||Circle of Power)" level="9" default="ID_PHB_SPELL_CIRCLE_OF_POWER" spellcasting="Sorcerer" />
+			<select type="Spell" name="Heroic Spells" supports="5,(Enchantment||Transmutation||Legend Lore),(($(spellcasting:list))||Bard||Legend Lore)" level="9" default="ID_PHB_SPELL_LEGEND_LORE" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Powerful Authority" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_POWERFUL_AUTHORITY">
+		<description>
+		<p>Starting at 1st level, you magic is hard to overcome. Whenever you cast a spell that forces a creature to roll a Wisdom or Charisma saving throw, you can choose to make them roll with disadvantage.</p>
+		<p class="indent">You can use this feature a number of times equal to your Charisma modifier (minimum of once), and regain all expended uses after a long rest.</p>
+		</description>
+		<sheet alt="Powerful Authority" usage="{{charisma:modifier}}/Long Rest" >
+			<description>Whenever you cast a spell that forces a creature to roll a Wisdom or Charisma saving throw, you can choose to make them roll with disadvantage.</description>
+		</sheet>
+	</element>
+	<element name="Level 1: Resilient Spirit" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_RESILIENT_SPIRIT">
+		<description>
+		<p>Also at 1st level, you have advantage on saving throws against being Charmed or Frightened (your choice).</p>
+		<p class="indent">At 10th level, you have advantage against both.</p>
+		</description>
+		<sheet alt="Resilient Spirit" display="false" />
+		<rules>
+			<select type="Archetype Feature" name="Resilient Spirit" supports="Resilient Spirit" />
+		</rules>
+	</element>
+	<element name="Charmed" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_RESILIENT_SPIRIT_CHARMED">
+	<supports>Resilient Spirit</supports>
+		<description>
+		<p>You have advantage on saving throws against being Charmed.</p>
+		<p class="indent">At 10th level, you have advantage on saving throws against being Charmed and Frightened.</p>
+		</description>
+		<sheet alt="Resilient Spirit" >
+			<description>You have advantage on saving throws against being Charmed.</description>
+			<description level="10">You have advantage on saving throws against being Charmed and Frightened.</description>
+		</sheet>
+	</element>
+	<element name="Frightened" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_RESILIENT_SPIRIT_FRIGHTENED">
+	<supports>Resilient Spirit</supports>
+		<description>
+		<p>You have advantage on saving throws against being Frightened.</p>
+		<p class="indent">At 10th level, you have advantage on saving throws against being Charmed and Frightened.</p>
+		</description>
+		<sheet alt="Resilient Spirit" >
+			<description>You have advantage on saving throws against being Frightened.</description>
+			<description level="10">You have advantage on saving throws against being Charmed and Frightened.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Experience Against Adversity" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_EXPERIENCE_AGAINST_ADVERSITY">
+		<description>
+			<p>Starting at 6th level, your ancestors guide you towards success. Whenever you make a Charisma or Intelligence ability check, you can treat a d20 roll of 9 or lower as an 10. You can do so a number of times equal to your proficiency modifier, and regain all expended uses after a long rest.</p>
+			<p class="indent">When you have no uses available, you can spend 2 sorcery points (no action required) to restore a use of this feature.</p>
+		</description>
+		<sheet alt="Experience Against Adversity" usage="{{proficiency}}/Long Rest">
+			<description>Whenever you make a Charisma or Intelligence ability check, you can treat a d20 roll of 9 or lower as an 10. &#13;
+			When you have no uses available, you can spend 2 sorcery points (no action required) to restore a use of this feature.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Heroic Presence" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_HEROIC_PRESENCE">
+		<description>
+			<p>At 14th level, you strike fear and wonder to those who see you attacked. Whenever you are the target of a harmful spell or attack, you can use your reaction to cause any creatures of your choice within 15 feet of you to make a Wisdom saving throw. On a failure, they are all Charmed or Frightened of you (your choice) for the next minute. A creature can repeat the saving throw whenever they take damage from you, ending the effect early on a success.</p>
+			<p class="indent">You must choose to use this feature before the result of the saving throw or attack roll is decided, and your Heroic Presence begins once the spell or attack is resolved. If the attack misses or spell fails to affect you, creatures affected by your Heroic Presence roll their saving throws against it with disadvantage.</p>
+			<p class="indent">Once you have used this feature, you cannot do so again until you finish a long rest.</p>
+		</description>
+		<sheet alt="Heroic Presence" action="Reaction" usage="1/Long Rest" >
+			<description>Whenever you are the target of a harmful spell or attack, you can use your reaction to cause any creatures of your choice within 15 feet of you to make a Wisdom saving throw. On a failure, they are all Charmed or Frightened of you (your choice) for the next minute. A creature can repeat the saving throw whenever they take damage from you, ending the effect early on a success. &#13;
+			You must choose to use this feature before the result of the saving throw or attack roll is decided, and your Heroic Presence begins once the spell or attack is resolved. If the attack misses or spell fails to affect you, creatures affected by your Heroic Presence roll their saving throws against it with disadvantage.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Spirit of the Chosen" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_SPIRIT_OF_THE_CHOSEN">
+		<description>
+			<p>At 18th level, your soul is insurmountable. Whenever you are forced to make an Intelligence, Wisdom, or Charisma saving throw, you can choose to automatically succeed at the save. You can do this a number of times equal to half your Charisma modifier, rounded down (minimum of 1), and regain all expended uses after a long rest.</p>
+			<p class="indent">When you have no uses available, you have advantage on these saves instead.</p>
+		</description>
+		<sheet alt="Spirit of the Chosen" usage="{{uses:spirit of the chosen}}/Long Rest">
+			<description>Whenever you are forced to make an Intelligence, Wisdom, or Charisma saving throw, you can choose to automatically succeed at the save. &#13;
+			When you have no uses left, you instead have advantage on these saves instead.</description>
+		</sheet>
+		<rules>
+			<stat name="uses:spirit of the chosen" value="1" bonus="base" />
+			<stat name="uses:spirit of the chosen" value="2" bonus="base" requirements="[cha:18]" />
+			<stat name="uses:spirit of the chosen" value="3" bonus="base" requirements="[cha:22]" />
+			<stat name="uses:spirit of the chosen" value="4" bonus="base" requirements="[cha:26]" />
+			<stat name="uses:spirit of the chosen" value="5" bonus="base" requirements="[cha:30]" />
+		</rules>
+	</element>
+
+	<append id="ID_PHB_SPELL_HEROISM">
+		<supports>Heroism</supports>
+	</append>
+	<append id="ID_PHB_SPELL_SANCTUARY">
+		<supports>Sanctuary</supports>
+	</append>
+	<append id="ID_PHB_SPELL_AID">
+		<supports>Aid</supports>
+	</append>
+	<append id="ID_PHB_SPELL_ENTHRALL">
+		<supports>Enthrall</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BEACON_OF_HOPE">
+		<supports>Beacon of Hope</supports>
+	</append>
+	<append id="ID_WOTC_ACQINC_SPELL_MOTIVATIONAL_SPEECH">
+		<supports>Motivational Speech</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_FIND_GREATER_STEED">
+		<supports>Find Greater Steed</supports>
+	</append>
+	<append id="ID_PHB_SPELL_MORDENKAINENS_PRIVATE_SANCTUM">
+		<supports>Private Sanctum</supports>
+	</append>
+	<append id="ID_PHB_SPELL_CIRCLE_OF_POWER">
+		<supports>Circle of Power</supports>
+	</append>
+	<append id="ID_PHB_SPELL_LEGEND_LORE">
+		<supports>Legend Lore</supports>
+	</append>
+
+</elements>
