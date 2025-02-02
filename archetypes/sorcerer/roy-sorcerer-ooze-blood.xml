@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Ooze Blood</name>
+		<description>The Ooze Blood Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1.1">
+			<file name="roy-sorcerer-ooze-blood.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-ooze-blood.xml" />
+		</update>
+	</info>
+
+	<element name="Ooze Blood" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_OOZE_BLOOD">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>Your ancestry is connected to the slimes of the world. Be it through reproducing with an Oblex, consumption of Gelatinous Cubes, or a brief exposure to the plane of ooze, this interaction has given you properties akin to the many oozes across the world.</p>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_OOZE_EXPANDED_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_GELATINOUS_BODY" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_TRANSPARENT_SHAPE" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_ENGULFING_PHYSIQUE" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_ACIDIC_FLUIDS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_TRUE_OOZE" />
+		</description>
+		<sheet display="false">
+			<description>Your ancestry is connected to the slimes of the world.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_OOZE_EXPANDED_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_GELATINOUS_BODY" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_TRANSPARENT_SHAPE" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_ENGULFING_PHYSIQUE" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_ACIDIC_FLUIDS" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_TRUE_OOZE" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Ooze Expanded Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_OOZE_EXPANDED_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the druid, sorcerer, or warlock spell list.</p>
+			<h5 class="caption">Ooze Expanded Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Create or Destroy Water, Grease</em></td></tr>
+					<tr><td>3rd</td><td><em>Melf's Acid Arrow, Spider Climb</em></td></tr>
+					<tr><td>5th</td><td><em>Haste, Water Walk</em></td></tr>
+					<tr><td>7th</td><td><em>Blight, Vitriolic Sphere</em></td></tr>
+					<tr><td>9th</td><td><em>Bigby's Hand, Hold Monster</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Ooze Expanded Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the druid, sorcerer, or warlock spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="1,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Warlock)" level="1" default="ID_PHB_SPELL_CREATE_OR_DESTROY_WATER" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="1,(Evocation||Transmutation||Grease),(($(spellcasting:list))||Druid||Warlock||Grease)" level="1" default="ID_PHB_SPELL_GREASE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="2,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Warlock||Acid Arrow)" level="3" default="ID_PHB_SPELL_MELFS_ACID_ARROW" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="2,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Warlock)" level="3" default="ID_PHB_SPELL_SPIDER_CLIMB" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="3,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Warlock)" level="5" default="ID_PHB_SPELL_HASTE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="3,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Warlock)" level="5" default="ID_PHB_SPELL_WATER_WALK" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="4,(Evocation||Transmutation||Blight),(($(spellcasting:list))||Druid||Warlock)" level="7" default="ID_PHB_SPELL_BLIGHT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="4,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Warlock)" level="7" default="ID_XGTE_SPELL_VITRIOLIC_SPHERE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="5,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Warlock||Bigbys Hand)" level="9" default="ID_PHB_SPELL_BIGBYS_HAND" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Ooze Expanded Spells)" supports="5,(Evocation||Transmutation||Hold Monster),(($(spellcasting:list))||Druid||Warlock)" level="9" default="ID_PHB_SPELL_HOLD_MONSTER" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Gelatinous Body" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_GELATINOUS_BODY">
+		<description>
+		<p>Starting at 1st level, your body has taken on a more amorphous physique. You can move through a space as narrow as 1 inch wide without squeezing, allowing you to move through a creature's space regardless of their size, so long as you aren't wearing any armor.</p>
+		<p class="indent">Additionally, this amorphous physique allows you to bend and move as if you lacked bones. When you aren’t wearing armor, your AC equals 13 + your Dexterity modifier.</p>
+		</description>
+		<sheet alt="Gelatinous Body">
+			<description>While you are unarmored, your Armor Class is {{ac:gelatinous body}}, and you can move through a space as narrow as 1 inch wide without squeezing.</description>
+		</sheet>
+		<rules>
+			<stat name="ac:gelatinous body" value="13" />
+			<stat name="ac:gelatinous body" value="dexterity:modifier" />
+			<stat name="ac:calculation" value="ac:gelatinous body" bonus="calculation" equipped="[armor:none]" alt="Gelatinous Body (Sorcerer)" />
+		</rules>
+	</element>
+	<element name="Level 1: Transparent Shape" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_TRANSPARENT_SHAPE">
+		<description>
+		<p>Also at 1st level, you know how to appear nearly invisible when you aren't moving. As a bonus action, you turn yourself invisible. You can use this bonus action only if you haven't moved during this turn. This invisibility immediately ends upon making an attack roll or casting a spell that requires a Somatic (S) or Verbal (V) component.</p>
+		</description>
+		<sheet alt="Transparent Shape" action="Bonus Action" >
+			<description>You turn yourself invisible, provided you haven't moved this turn. This invisibility immediately ends upon making an attack roll or casting a spell that requires a Somatic (S) or Verbal (V) component.</description>
+		</sheet>
+	</element>
+	
+	<element name="Level 6: Engulfing Physique" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_ENGULFING_PHYSIQUE">
+		<description>
+			<p>At 6th level, your gelatinous qualities expand. You gain resistance to acid damage.</p>
+			<p class="indent">Whenever you would be the target of a weapon attack from a weapon of your size or smaller, you can use your reaction to reduce the damage you take from the attack by an amount equal to 1d10 + your Charisma modifier + your sorcerer level. If you reduce the damage to 0, your body absorbs the weapon, disarming your attacker if the attack came from a melee weapon attack. You can eject an absorbed weapon as a bonus action, dropping it at your feet or within your hands. Any nonmagical weapons still absorbed within you by the time you finish a short or long rest are consumed as if they were food.</p>
+			<p class="indent">You can perform such a reaction a number of times equal to your proficiency bonus, and regain all expended uses after a long rest. When you have no remaining uses, you can spend 3 sorcery points to regain one use.</p>
+		</description>
+		<sheet alt="Engulfing Physique" action="Reaction" usage="{{proficiency}}/Long Rest">
+			<description>Whenever you would be the target of a weapon attack from a weapon of your size or smaller, you can reduce the damage you take from the attack by 1d10+{{reduction:engulfing physique}}. If you reduce the damage to 0, your body absorbs the weapon, disarming your attacker if the attack came from a melee weapon attack. You can eject an absorbed weapon as a bonus action, dropping it at your feet or within your hands. Any nonmagical weapons still absorbed within you by the time you finish a short or long rest are consumed as if they were food. &#13;
+			When you have no remaining uses, you can spend 3 sorcery points (no action required) to regain one use.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+			<stat name="reduction:engulfing physique" value="charisma:modifier" />
+			<stat name="reduction:engulfing physique" value="level:sorcerer" />
+		</rules>
+	</element>
+
+	<element name="Level 14: Acidic Fluids" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_ACIDIC_FLUIDS">
+		<description>
+			<p>Starting at 14th level, your body can become extremely sticky and acidic. You gain a climbing speed equal to your walking speed. This climbing speed allows you to move up, down, and across vertical surfaces while leaving your hands free, even if you are upside down on a ceiling.</p>
+			<p class="indent">Additionally, whenever you start your turn, you can leave behind a trail of acidic ooze in the spaces you wander through. This ooze lasts until the start of your next turn, and is treated as difficult terrain for any creature with a walking speed. A creature who enters one of these spaces for the first time or starts its turn in one takes an amount of acid damage equal to your sorcerer level.</p>
+		</description>
+		<sheet alt="Acidic Fluids" >
+			<description>Whenever you move on your turn, you can leave behind a trail of acidic ooze in the spaces you wander through. This ooze lasts until the start of your next turn, and is treated as difficult terrain for any creature with a walking speed. A creature who enters one of these spaces for the first time or starts its turn in one takes {{level:sorcerer}} acid damage.</description>
+		</sheet>
+		<rules>
+			<stat name="speed:climb" value="speed" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Level 18: True Ooze" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_OOZE_TRUE_OOZE">
+		<description>
+			<p>At 18th level, you gain immunity to acid and slashing damage. Whenever you would be subjected to slashing damage, you split into two copies of yourself so long as you have 2 hit points left.</p>
+			<p class="indent">This new ooze copy breaks off into an unoccupied space within 5 feet of you. Both of you share half your original hit points and hit point maximum rounded down, and are one size smaller than your original form, but share identical statistics beyond that.</p>
+			<p class="indent">For the next minute, your copy shares the same initiative count, but it takes its turns immediately after yours. You can move it and make it uses its reactions, but the only action you can make it take is to cast a cantrip. If you are incapacitated, your copy can take any action you can normally do.</p>
+			<p class="indent">Your ooze copy lasts for the duration or until it is reduced to 0 hit points, at which point you return to your normal form but with your hit point maximum still halved. Your hit point maximum returns to normal after a long rest. If you would die but your ooze copy would still be alive, your ooze copy instead returns to your normal form, having the same reduced hit point maximum limit.</p>
+			<p class="indent">Whenever you are both within 5 feet of each other, you can return to your normal form as an action. Doing so returns your hit point maximum to normal, returning your current hit points to an amount equal the sum of you and your ooze clone's hit points before reformation. Any conditions or effects your ooze clone gained while split off are lost upon reformation.</p>
+			<p class="indent">Once you have been split in such a manner, you cannot use this feature again until you finish a long rest.</p>
+		</description>
+		<sheet alt="True Ooze" usage="1/Long Rest">
+			<description>Whenever you would be subjected to slashing damage, you split into two copies of yourself so long as you have 2 hit points left. You and your ooze clone share half your original hit points and hit point maximum rounded down, and are one size smaller than your original form, but share identical statistics beyond that. &#13;
+			For the next minute, your copy shares the same initiative count, but it takes its turns immediately after yours. You can move it and make it uses its reactions, but the only action you can make it take is to cast a cantrip. If you are incapacitated, your copy can take any action you can normally do. &#13;Your ooze copy lasts for the duration or until it is reduced to 0 hit points, at which point you return to your normal form but with your hit point maximum still halved. Your hit point maximum returns to normal after a long rest. If you would die but your ooze copy would still be alive, your ooze copy instead returns to your normal form, having the same reduced hit point maximum limit. &#13;
+			Whenever you are both within 5 feet of each other, you can return to your normal form as an action. Doing so returns your hit point maximum to normal, returning your current hit points to an amount equal the sum of you and your ooze clone's hit points before reformation. Any conditions or effects your ooze clone gained while split off are lost upon reformation.
+			</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_ACID" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_SLASHING" />
+		</rules>
+	</element>
+
+	<append id="ID_PHB_SPELL_GREASE">
+		<supports>Grease</supports>
+	</append>
+	<append id="ID_PHB_SPELL_MELFS_ACID_ARROW">
+		<supports>Acid Arrow</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BIGBYS_HAND">
+		<supports>Bigbys Hand</supports>
+	</append>
+	<append id="ID_PHB_SPELL_HOLD_MONSTER">
+		<supports>Hold Monster</supports>
+	</append>
+</elements>
