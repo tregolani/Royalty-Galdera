@@ -4,7 +4,7 @@
 		<name>Essence of War</name>
 		<description>The Essence of War Subclass from Royalty for the Galdera Setting.</description>
 		<author>Royalty</author>
-		<update version="0.1">
+		<update version="0.1.1">
 			<file name="roy-sorcerer-essence-of-war.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-essence-of-war.xml" />
 		</update>
 	</info>
@@ -53,16 +53,16 @@
 			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the paladin or sorcerer spell list.</description>
 		</sheet>
 		<rules>
-			<select type="Spell" name="War Spells" supports="1,(Evocation||Transmutation||Heroism),(($(spellcasting:list))||Paladin)" level="1" default="ID_PHB_SPELL_HEROISM" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="1,(Evocation||Transmutation||Wrathful Smite),(($(spellcasting:list))||Paladin)" level="1" default="ID_PHB_SPELL_WRATHFUL_SMITE" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="2,(Evocation||Transmutation||Shadow Blade),(($(spellcasting:list))||Paladin)" level="3" default="ID_XGTE_SPELL_SHADOW_BLADE" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="2,(Evocation||Transmutation||Spiritual Weapon),(($(spellcasting:list))||Paladin||Spiritual Weapon)" level="3" default="ID_PHB_SPELL_SPIRITUAL_WEAPON" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="3,(Evocation||Transmutation||Blinding Smite),(($(spellcasting:list))||Paladin)" level="5" default="ID_PHB_SPELL_BLINDING_SMITE" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="3,(Evocation||Transmutation||Spirit Shroud),(($(spellcasting:list))||Paladin||Spirit Shroud)" level="5" default="ID_WOTC_TCOE_SPELL_SPIRIT_SHROUD" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="4,(Evocation||Transmutation||Death Ward),(($(spellcasting:list))||Paladin)" level="7" default="ID_PHB_SPELL_DEATH_WARD" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="4,(Evocation||Transmutation||Blinding Smite),(($(spellcasting:list))||Paladin)" level="7" default="ID_PHB_SPELL_STAGGERING_SMITE" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="5,(Evocation||Transmutation||Holy Weapon),(($(spellcasting:list))||Paladin)" level="9" default="ID_XGTE_SPELL_HOLY_WEAPON" spellcasting="Sorcerer" />
-			<select type="Spell" name="War Spells" supports="5,(Evocation||Transmutation||Steel Wind Strike),(($(spellcasting:list))||Paladin||Steel Wind Strike)" level="9" default="ID_XGTE_SPELL_STEEL_WIND_STRIKE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="1,(Evocation||Transmutation||Heroism),(($(spellcasting:list))||Paladin)" level="1" default="ID_PHB_SPELL_HEROISM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="1,(Evocation||Transmutation||Wrathful Smite),(($(spellcasting:list))||Paladin)" level="1" default="ID_PHB_SPELL_WRATHFUL_SMITE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="2,(Evocation||Transmutation||Shadow Blade),(($(spellcasting:list))||Paladin)" level="3" default="ID_XGTE_SPELL_SHADOW_BLADE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="2,(Evocation||Transmutation||Spiritual Weapon),(($(spellcasting:list))||Paladin||Spiritual Weapon)" level="3" default="ID_PHB_SPELL_SPIRITUAL_WEAPON" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="3,(Evocation||Transmutation||Blinding Smite),(($(spellcasting:list))||Paladin)" level="5" default="ID_PHB_SPELL_BLINDING_SMITE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="3,(Evocation||Transmutation||Spirit Shroud),(($(spellcasting:list))||Paladin||Spirit Shroud)" level="5" default="ID_WOTC_TCOE_SPELL_SPIRIT_SHROUD" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="4,(Evocation||Transmutation||Death Ward),(($(spellcasting:list))||Paladin)" level="7" default="ID_PHB_SPELL_DEATH_WARD" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="4,(Evocation||Transmutation||Blinding Smite),(($(spellcasting:list))||Paladin)" level="7" default="ID_PHB_SPELL_STAGGERING_SMITE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="5,(Evocation||Transmutation||Holy Weapon),(($(spellcasting:list))||Paladin)" level="9" default="ID_XGTE_SPELL_HOLY_WEAPON" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (War Spells)" supports="5,(Evocation||Transmutation||Steel Wind Strike),(($(spellcasting:list))||Paladin||Steel Wind Strike)" level="9" default="ID_XGTE_SPELL_STEEL_WIND_STRIKE" spellcasting="Sorcerer" />
 		</rules>
 	</element>
 	<element name="Level 1: Born for War" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ESSENCE_OF_WAR_BORN_FOR_WAR">
