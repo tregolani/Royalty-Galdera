@@ -4,7 +4,7 @@
 		<name>Cursed One</name>
 		<description>The Cursed One Subclass from Royalty for the Galdera Setting.</description>
 		<author>Royalty</author>
-		<update version="0.1">
+		<update version="0.1.1">
 			<file name="roy-sorcerer-cursed-one.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-cursed-one.xml" />
 		</update>
 	</info>
@@ -51,16 +51,16 @@
 			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or necromancy spell from the sorcerer, wizard, or warlock spell list.</description>
 		</sheet>
 		<rules>
-			<select type="Spell" name="Cursed One Spells" supports="1,(Enchantment||Necromancy||Bane),(($(spellcasting:list))||Wizard||Warlock||Bane)" level="1" default="ID_PHB_SPELL_BANE" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="1,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Hex)" level="1" default="ID_PHB_SPELL_HEX" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="2,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Blindness Deafness)" level="3" default="ID_PHB_SPELL_BLINDNESS_DEAFNESS" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="2,(Enchantment||Necromancy||Lesser Restoration),(($(spellcasting:list))||Wizard||Warlock||Lesser Restoration)" level="3" default="ID_PHB_SPELL_LESSER_RESTORATION" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="3,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Bestow Curse)" level="5" default="ID_PHB_SPELL_BESTOW_CURSE" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="3,(Enchantment||Necromancy||Remove Curse),(($(spellcasting:list))||Wizard||Warlock||Remove Curse)" level="5" default="ID_PHB_SPELL_REMOVE_CURSE" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="4,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Blight)" level="7" default="ID_PHB_SPELL_BLIGHT" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="4,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Confusion)" level="7" default="ID_PHB_SPELL_CONFUSION" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="5,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Contagion)" level="9" default="ID_PHB_SPELL_CONTAGION" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cursed One Spells" supports="5,(Enchantment||Necromancy||Greater Restoration),(($(spellcasting:list))||Wizard||Warlock||Greater Restoration)" level="9" default="ID_PHB_SPELL_GREATER_RESTORATION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="1,(Enchantment||Necromancy||Bane),(($(spellcasting:list))||Wizard||Warlock||Bane)" level="1" default="ID_PHB_SPELL_BANE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="1,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Hex)" level="1" default="ID_PHB_SPELL_HEX" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="2,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Blindness Deafness)" level="3" default="ID_PHB_SPELL_BLINDNESS_DEAFNESS" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="2,(Enchantment||Necromancy||Lesser Restoration),(($(spellcasting:list))||Wizard||Warlock||Lesser Restoration)" level="3" default="ID_PHB_SPELL_LESSER_RESTORATION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="3,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Bestow Curse)" level="5" default="ID_PHB_SPELL_BESTOW_CURSE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="3,(Enchantment||Necromancy||Remove Curse),(($(spellcasting:list))||Wizard||Warlock||Remove Curse)" level="5" default="ID_PHB_SPELL_REMOVE_CURSE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="4,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Blight)" level="7" default="ID_PHB_SPELL_BLIGHT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="4,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Confusion)" level="7" default="ID_PHB_SPELL_CONFUSION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="5,(Enchantment||Necromancy),(($(spellcasting:list))||Wizard||Warlock||Contagion)" level="9" default="ID_PHB_SPELL_CONTAGION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cursed One Spells)" supports="5,(Enchantment||Necromancy||Greater Restoration),(($(spellcasting:list))||Wizard||Warlock||Greater Restoration)" level="9" default="ID_PHB_SPELL_GREATER_RESTORATION" spellcasting="Sorcerer" />
 		</rules>
 	</element>
 	<element name="Level 1: Curse Devourer" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_CURSED_CURSE_DEVOURER">
