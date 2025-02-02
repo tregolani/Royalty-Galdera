@@ -4,7 +4,7 @@
 		<name>Royalty’s Galdera Collection</name>
 		<description>A collection of personal homebrew created by Royalty for his Galdera setting.</description>
 		<author>"Royalty"</author>
-		<update version="1.3">
+		<update version="1.4">
 			<file name="royalty-galdera.index" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/royalty-galdera.index" />
 		</update>
 	</info>
@@ -37,6 +37,7 @@
 		<file name="roy-sorcerer-cursed-one.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-cursed-one.xml" />
 		<file name="roy-sorcerer-essence-of-war.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-essence-of-war.xml" />
 		<file name="roy-sorcerer-heroic-spirit.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-heroic-spirit.xml" />
+		<file name="roy-sorcerer-ooze-blood.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-ooze-blood.xml" />
 
 	<!-- Warlock -->
 
