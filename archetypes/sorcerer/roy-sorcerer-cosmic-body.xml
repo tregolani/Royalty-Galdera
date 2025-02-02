@@ -4,7 +4,7 @@
 		<name>Cosmic Body</name>
 		<description>The Cosmic Body Subclass from Royalty for the Galdera Setting.</description>
 		<author>Royalty</author>
-		<update version="0.1.1">
+		<update version="0.1.2">
 			<file name="roy-sorcerer-cosmic-body.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-cosmic-body.xml" />
 		</update>
 	</info>
@@ -63,16 +63,16 @@
 			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or conjuration spell from the sorcerer, druid, or warlock spell list.</description>
 		</sheet>
 		<rules>
-			<select type="Spell" name="Cosmic Spells" supports="1,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Guiding Bolt)" level="1" default="ID_PHB_SPELL_GUIDING_BOLT" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="1,(Evocation||Conjuration||Magnify Gravity),(($(spellcasting:list))||Druid||Warlock||Magnify Gravity)" level="1" default="ID_WOTC_EGTW_SPELL_MAGNIFY_GRAVITY" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="2,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Moonbeam)" level="3" default="ID_PHB_SPELL_MOONBEAM" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="2,(Evocation||Conjuration||Silence),(($(spellcasting:list))||Druid||Warlock||Silence)" level="3" default="ID_PHB_SPELL_SILENCE" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="3,(Evocation||Conjuration||Hypnotic Pattern),(($(spellcasting:list))||Druid||Warlock||Hypnotic Pattern)" level="5" default="ID_PHB_SPELL_HYPNOTIC_PATTERN" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="3,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Melfs Minute Meteors)" level="5" default="ID_XGTE_SPELL_MELFS_MINUTE_METEORS" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="4,(Evocation||Conjuration||Banishment),(($(spellcasting:list))||Druid||Warlock||Banishment)" level="7" default="ID_PHB_SPELL_BANISHMENT" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="4,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Gravity Sinkhole)" level="7" default="ID_WOTC_EGTW_SPELL_GRAVITY_SINKHOLE" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="5,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Dawn)" level="9" default="ID_XGTE_SPELL_DAWN" spellcasting="Sorcerer" />
-			<select type="Spell" name="Cosmic Spells" supports="5,(Evocation||Conjuration||Temporal Shunt),(($(spellcasting:list))||Druid||Warlock||Temporal Shunt)" level="9" default="ID_WOTC_EGTW_SPELL_TEMPORAL_SHUNT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="1,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Guiding Bolt)" level="1" default="ID_PHB_SPELL_GUIDING_BOLT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="1,(Evocation||Conjuration||Magnify Gravity),(($(spellcasting:list))||Druid||Warlock||Magnify Gravity)" level="1" default="ID_WOTC_EGTW_SPELL_MAGNIFY_GRAVITY" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="2,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Moonbeam)" level="3" default="ID_PHB_SPELL_MOONBEAM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="2,(Evocation||Conjuration||Silence),(($(spellcasting:list))||Druid||Warlock||Silence)" level="3" default="ID_PHB_SPELL_SILENCE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="3,(Evocation||Conjuration||Hypnotic Pattern),(($(spellcasting:list))||Druid||Warlock||Hypnotic Pattern)" level="5" default="ID_PHB_SPELL_HYPNOTIC_PATTERN" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="3,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Melfs Minute Meteors)" level="5" default="ID_XGTE_SPELL_MELFS_MINUTE_METEORS" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="4,(Evocation||Conjuration||Banishment),(($(spellcasting:list))||Druid||Warlock||Banishment)" level="7" default="ID_PHB_SPELL_BANISHMENT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="4,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Gravity Sinkhole)" level="7" default="ID_WOTC_EGTW_SPELL_GRAVITY_SINKHOLE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="5,(Evocation||Conjuration),(($(spellcasting:list))||Druid||Warlock||Dawn)" level="9" default="ID_XGTE_SPELL_DAWN" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Cosmic Spells)" supports="5,(Evocation||Conjuration||Temporal Shunt),(($(spellcasting:list))||Druid||Warlock||Temporal Shunt)" level="9" default="ID_WOTC_EGTW_SPELL_TEMPORAL_SHUNT" spellcasting="Sorcerer" />
 		</rules>
 	</element>
 	<element name="Level 1: Solar Body" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_COSMIC_SOLAR_BODY">
