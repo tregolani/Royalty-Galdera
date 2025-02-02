@@ -4,7 +4,7 @@
 		<name>Heroic Spirit</name>
 		<description>The Heroic Spirit Subclass from Royalty for the Galdera Setting.</description>
 		<author>Royalty</author>
-		<update version="0.1">
+		<update version="0.1.1">
 			<file name="roy-sorcerer-heroic-spirit.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-heroic-spirit.xml" />
 		</update>
 	</info>
@@ -53,16 +53,16 @@
 			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an enchantment or transmutation spell from the bard or sorcerer spell list.</description>
 		</sheet>
 		<rules>
-			<select type="Spell" name="Heroic Spells" supports="1,(Enchantment||Transmutation),(($(spellcasting:list))||Bard||Heroism)" level="1" default="ID_PHB_SPELL_HEROISM" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="1,(Enchantment||Transmutation||Sanctuary),(($(spellcasting:list))||Bard||Sanctuary)" level="1" default="ID_PHB_SPELL_SANCTUARY" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="2,(Enchantment||Transmutation||Aid),(($(spellcasting:list))||Bard||Aid)" level="3" default="ID_PHB_SPELL_AID" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="2,(Enchantment||Transmutation||Enthrall),(($(spellcasting:list))||Bard)" level="3" default="ID_PHB_SPELL_ENTHRALL" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="3,(Enchantment||Transmutation||Beacon of Hope),(($(spellcasting:list))||Bard||Beacon of Hope)" level="5" default="ID_PHB_SPELL_BEACON_OF_HOPE" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="3,(Enchantment||Transmutation||Motivational Speech),(($(spellcasting:list))||Bard||Motivational Speech)" level="5" default="ID_WOTC_ACQINC_SPELL_MOTIVATIONAL_SPEECH" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="4,(Enchantment||Transmutation||Find Greater Steed),(($(spellcasting:list))||Bard||Find Greater Steed)" level="7" default="ID_XGTE_SPELL_FIND_GREATER_STEED" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="4,(Enchantment||Transmutation||Private Sanctum),(($(spellcasting:list))||Bard||Private Sanctum)" level="7" default="ID_PHB_SPELL_MORDENKAINENS_PRIVATE_SANCTUM" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="5,(Enchantment||Transmutation||Circle of Power),(($(spellcasting:list))||Bard||Circle of Power)" level="9" default="ID_PHB_SPELL_CIRCLE_OF_POWER" spellcasting="Sorcerer" />
-			<select type="Spell" name="Heroic Spells" supports="5,(Enchantment||Transmutation||Legend Lore),(($(spellcasting:list))||Bard||Legend Lore)" level="9" default="ID_PHB_SPELL_LEGEND_LORE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="1,(Enchantment||Transmutation),(($(spellcasting:list))||Bard||Heroism)" level="1" default="ID_PHB_SPELL_HEROISM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="1,(Enchantment||Transmutation||Sanctuary),(($(spellcasting:list))||Bard||Sanctuary)" level="1" default="ID_PHB_SPELL_SANCTUARY" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="2,(Enchantment||Transmutation||Aid),(($(spellcasting:list))||Bard||Aid)" level="3" default="ID_PHB_SPELL_AID" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="2,(Enchantment||Transmutation||Enthrall),(($(spellcasting:list))||Bard)" level="3" default="ID_PHB_SPELL_ENTHRALL" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="3,(Enchantment||Transmutation||Beacon of Hope),(($(spellcasting:list))||Bard||Beacon of Hope)" level="5" default="ID_PHB_SPELL_BEACON_OF_HOPE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="3,(Enchantment||Transmutation||Motivational Speech),(($(spellcasting:list))||Bard||Motivational Speech)" level="5" default="ID_WOTC_ACQINC_SPELL_MOTIVATIONAL_SPEECH" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="4,(Enchantment||Transmutation||Find Greater Steed),(($(spellcasting:list))||Bard||Find Greater Steed)" level="7" default="ID_XGTE_SPELL_FIND_GREATER_STEED" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="4,(Enchantment||Transmutation||Private Sanctum),(($(spellcasting:list))||Bard||Private Sanctum)" level="7" default="ID_PHB_SPELL_MORDENKAINENS_PRIVATE_SANCTUM" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="5,(Enchantment||Transmutation||Circle of Power),(($(spellcasting:list))||Bard||Circle of Power)" level="9" default="ID_PHB_SPELL_CIRCLE_OF_POWER" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Heroic Spells)" supports="5,(Enchantment||Transmutation||Legend Lore),(($(spellcasting:list))||Bard||Legend Lore)" level="9" default="ID_PHB_SPELL_LEGEND_LORE" spellcasting="Sorcerer" />
 		</rules>
 	</element>
 	<element name="Level 1: Powerful Authority" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_HEROIC_SPIRIT_POWERFUL_AUTHORITY">
