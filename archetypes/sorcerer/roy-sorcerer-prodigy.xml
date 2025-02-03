@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Prodigy</name>
+		<description>The Prodigy Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1.1">
+			<file name="roy-sorcerer-prodigy.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-prodigy.xml" />
+		</update>
+	</info>
+
+	<element name="Prodigy" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_PRODIGY">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>While many sorcerers may be born with a lineage connected to magical creatures originating from across corners of the universe, your ancestry is connected to a being who spent their life studying the very foundations of magic. Be it a scholar who learned all there is within the various schools of magic, a wizard who has lived centuries within living bones, or an intellectual who had witnessed the grandest of magic displays, their knowledge seeps within your blood and soul.</p>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_PRODIGY_EXPANDED_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_GIFTED_BLOOD" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_STUDIED_MAGIC" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_ARCANE_ACCESS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_BODY_FOR_THE_ARCANE" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_TRUE_PRODIGY" />
+		</description>
+		<sheet display="false">
+			<description>your sorcerous ancestry is connected to a being who spent their life studying the very foundations of magic.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_PRODIGY_EXPANDED_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_GIFTED_BLOOD" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_STUDIED_MAGIC" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_ARCANE_ACCESS" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_BODY_FOR_THE_ARCANE" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_TRUE_PRODIGY" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Prodigy Expanded Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_PRODIGY_EXPANDED_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the bard or wizard spell list.</p>
+			<h5 class="caption">Prodigy Expanded Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Find Familiar, Identify</em></td></tr>
+					<tr><td>3rd</td><td><em>Arcane Lock, Enhance Ability</em></td></tr>
+					<tr><td>5th</td><td><em>Galder's Tower, Intellect Fortress</em></td></tr>
+					<tr><td>7th</td><td><em>Arcane Eye, Death Ward</em></td></tr>
+					<tr><td>9th</td><td><em>Skill Empowerment, Telekinesis</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Prodigy Expanded Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the bard or wizard spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="1,(Evocation||Transmutation||Find Familiar),(($(spellcasting:list))||Bard||Wizard)" level="1" default="ID_PHB_SPELL_FIND_FAMILIAR" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="1,(Evocation||Transmutation||Identify),(($(spellcasting:list))||Bard||Wizard)" level="1" default="ID_PHB_SPELL_IDENTIFY" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="2,(Evocation||Transmutation||Arcane Lock),(($(spellcasting:list))||Bard||Wizard)" level="3" default="ID_PHB_SPELL_ARCANE_LOCK" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="2,(Evocation||Transmutation),(($(spellcasting:list))||Bard||Wizard)" level="3" default="ID_PHB_SPELL_ENHANCE_ABILITY" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="3,(Evocation||Transmutation||Galders Tower),(($(spellcasting:list))||Bard||Wizard)" level="5" default="ID_LLOK_SPELL_GALDERS_TOWER" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="3,(Evocation||Transmutation||Intellect Fortress),(($(spellcasting:list))||Bard||Wizard)" level="5" default="ID_WOTC_TCOE_SPELL_INTELLECT_FORTRESS" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="4,(Evocation||Transmutation||Arcane Eye),(($(spellcasting:list))||Bard||Wizard)" level="7" default="ID_PHB_SPELL_ARCANE_EYE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="4,(Evocation||Transmutation||Death Ward),(($(spellcasting:list))||Bard||Wizard||Death Ward)" level="7" default="ID_PHB_SPELL_DEATH_WARD" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="5,(Evocation||Transmutation),(($(spellcasting:list))||Bard||Wizard)" level="9" default="ID_XGTE_SPELL_SKILL_EMPOWERMENT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Prodigy Expanded Spells)" supports="5,(Evocation||Transmutation),(($(spellcasting:list))||Bard||Wizard)" level="9" default="ID_PHB_SPELL_TELEKINESIS" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Gifted Blood" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_GIFTED_BLOOD">
+		<description>
+		<p>Starting at 1st level, you were born full of knowledge. You can use your Charisma modifier, rather than your Intelligence modifier, for Intelligence checks and Intelligence saving throws.</p>
+		<p class="indent">Additionally, you gain proficiency in one skill and tool of your choice. When you make a check with that tool or skill, you can treat a d20 roll of 9 or lower as a 10.</p>
+		</description>
+		<sheet alt="Gifted Blood">
+			<description>You can use your Charisma modifier, rather than your Intelligence modifier, for Intelligence checks and Intelligence saving throws (already factored into sheet values). &#13;
+			When you make a check with your chosen skill or tool, you can treat a d20 roll of a 9 or lower as a 10.</description>
+		</sheet>
+		<rules>
+			<stat name="arcana:misc" value="-intelligence:modifier" />
+			<stat name="arcana:misc" value="intelligence:modifier" bonus="ability" />
+			<stat name="arcana:misc" value="charisma:modifier" bonus="ability" />
+			<stat name="history:misc" value="-intelligence:modifier" />
+			<stat name="history:misc" value="intelligence:modifier" bonus="ability" />
+			<stat name="history:misc" value="charisma:modifier" bonus="ability" />
+			<stat name="investigation:misc" value="-intelligence:modifier" />
+			<stat name="investigation:misc" value="intelligence:modifier" bonus="ability" />
+			<stat name="investigation:misc" value="charisma:modifier" bonus="ability" />
+			<stat name="nature:misc" value="-intelligence:modifier" />
+			<stat name="nature:misc" value="intelligence:modifier" bonus="ability" />
+			<stat name="nature:misc" value="charisma:modifier" bonus="ability" />
+			<stat name="religion:misc" value="-intelligence:modifier" />
+			<stat name="religion:misc" value="intelligence:modifier" bonus="ability" />
+			<stat name="religion:misc" value="charisma:modifier" bonus="ability" />
+			<stat name="intelligence:save:misc" value="-intelligence:modifier" />
+			<stat name="intelligence:save:misc" value="intelligence:modifier" bonus="ability" />
+			<stat name="intelligence:save:misc" value="charisma:modifier" bonus="ability" />
+			<select type="Proficiency" name="Skill Proficiency (Gifted Blood Sorcerer)" supports="Skill,!Expertise"/>
+			<select type="Proficiency" name="Tool Proficiency (Gifted Blood Sorcerer)" supports="Tool,!Expertise"/>
+		</rules>
+	</element>
+	<element name="Level 1: Studied Magic" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_STUDIED_MAGIC">
+		<description>
+		<p>Also at 1st level, your arcane lineage lets you cast a spell over a duration of time. You can cast a sorcerer spell as a ritual if that spell has the ritual tag and you know the spell.</p>
+		</description>
+		<sheet alt="Studied Magic" action="Bonus Action" >
+			<description>You can cast any sorcerer spell you know as a ritual as long as it has the ritual tag.</description>
+		</sheet>
+	</element>
+	
+	<element name="Level 6: Arcane Access" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_ARCANE_ACCESS">
+		<description>
+			<p>At 6th level, you can search deep within yourself to slowly extract magic. As an action, you can choose a spell from the sorcerer or wizard spell list. You do not need to know this spell. You can cast it as a ritual spell, as if it had the ritual tag, by spending a number of sorcery points equal to the spell level you wish to cast it.</p>
+			<p class="indent">This spell cannot be cast at a level higher than your proficiency bonus, and can't be higher than 5th level.</p>
+			<p class="indent">Once you cast a spell in this manner, you can't do so again until you finish a short or long rest.</p>
+		</description>
+		<sheet alt="Arcane Access" action="Action" usage="1/Short Rest">
+			<description>You can choose a spell from the sorcerer or wizard spell list. You do not need to know this spell. You can cast it as a ritual spell, as if it had the ritual tag, by spending a number of sorcery points equal to the spell level you wish to cast it. &#13;
+			This spell cannot be cast at higher than a level {{proficiency}} spell, and can't be higher than 5th level.</description>
+		</sheet>
+		<rules>
+			<stat name="arcane access:spell level" value="proficiency" requirements="![level:17]" />
+			<stat name="arcane access:spell level" value="5" requirements="[level:17]" />
+		</rules>
+	</element>
+
+	<element name="Level 14: Body for the Arcane" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_BODY_FOR_THE_ARCANE">
+		<description>
+			<p>Starting at 14th level, your body is a source for magic. You no longer require an arcane focus as a spellcasting focus for your spells.</p>
+			<p class="indent">Additionally, upon casting a spell that requires concentration, you can choose to have it that damage can't break your concentration on it.</p>
+			<p class="indent">You can alter a spell in this manner once per short or long rest, and you can spend 3 sorcery points to regain a use of this feature.</p>
+		</description>
+		<sheet alt="Body for the Arcane" usage="1/Short Rest">
+			<description>You no longer require an arcane focus as a spellcasting focus for your spells. Additionally, upon casting a spell that requires concentration, you can choose to have it that damage can't break your concentration on it. &#13;
+			If you have no more uses of this feature, you can spend 3 sorcery points (no action required) to regain a use of it.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: True Prodigy" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_PRODIGY_TRUE_PRODIGY">
+		<description>
+			<p>At 18th level, you knowledge on magic surpasses that of your ancestry. When you are subjected to a spell or magical effect that allows you to make a saving throw, you take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
+			<p class="indent">Additionally, choose three spells from the wizard spell list, one from each of the following levels: 7th, 8th, and 9th. You add them to your list of know sorcerer spells, and they don’t count against the number of sorcerer spells you know.</p>
+		</description>
+		<sheet alt="True Prodigy">
+			<description>When you are subjected to a spell or magical effect that allows you to make a saving throw, you take no damage if you succeed on the saving throw, and only half damage if you fail.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Spell (True Prodigy, 7th)" supports="($(spellcasting:list)||Wizard),7" number="1" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (True Prodigy, 8th)" supports="($(spellcasting:list)||Wizard),8" number="1" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (True Prodigy, 9th)" supports="($(spellcasting:list)||Wizard),9" number="1" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+
+	<append id="ID_PHB_SPELL_FIND_FAMILIAR">
+		<supports>Find Familiar</supports>
+	</append>
+	<append id="ID_PHB_SPELL_IDENTIFY">
+		<supports>Identify</supports>
+	</append>
+	<append id="ID_PHB_SPELL_ARCANE_LOCK">
+		<supports>Arcane Lock</supports>
+	</append>
+	<append id="ID_LLOK_SPELL_GALDERS_TOWER">
+		<supports>Galders Tower</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_SPELL_INTELLECT_FORTRESS">
+		<supports>Intellect Fortress</supports>
+	</append>
+	<append id="ID_PHB_SPELL_ARCANE_EYE">
+		<supports>Arcane Eye</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DEATH_WARD">
+		<supports>Death Ward</supports>
+	</append>
+</elements>
