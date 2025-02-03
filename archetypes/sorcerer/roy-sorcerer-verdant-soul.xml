@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Verdant Soul</name>
+		<description>The Verdant Soul Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1.1">
+			<file name="roy-sorcerer-verdant-soul.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-verdant-soul.xml" />
+		</update>
+	</info>
+
+	<element name="Verdant Soul" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_VERDANT_SOUL">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>Your magic comes from the forests and gardens of the world. Those with these powers can trace their magic to being born in forests connected to the Feywild, while others may have had a dryad ancestor, or your family once oversaw the protection of an ancient tree that has existed for aeons. No matter the case, your blood flows with fertile magic.</p>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_VERDANT_EXPANDED_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_MAGIC_PLANT" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_PLEASANT_FRAGRANCE" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_TREE_FORM" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_PHOTOSYNTHESIS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_AWAKENING_THE_MASTERS" />
+		</description>
+		<sheet display="false">
+			<description>Your magic comes from the forests and gardens of the world, and your blood flows with the primal essence of nature.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_VERDANT_EXPANDED_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_MAGIC_PLANT" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_PLEASANT_FRAGRANCE" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_TREE_FORM" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_PHOTOSYNTHESIS" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_AWAKENING_THE_MASTERS" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Verdant Expanded Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_VERDANT_EXPANDED_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the sorcerer, druid, or wizard spell list.</p>
+			<h5 class="caption">Verdant Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Earth Tremor, Goodberry</em></td></tr>
+					<tr><td>3rd</td><td><em>Barkskin, Spike Growth</em></td></tr>
+					<tr><td>5th</td><td><em>Daylight, Plant Growth</em></td></tr>
+					<tr><td>7th</td><td><em>Aura of Life, Guardian of Nature</em></td></tr>
+					<tr><td>9th</td><td><em>Dawn, Wrath of Nature</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Verdant Expanded Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an evocation or transmutation spell from the sorcerer, druid, or wizard spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Spell (Verdant Spells)" supports="1,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="1" default="ID_XGTE_SPELL_EARTH_TREMOR" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="1,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="1" default="ID_PHB_SPELL_GOODBERRY" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="2,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="3" default="ID_PHB_SPELL_BARKSKIN" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="2,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="3" default="ID_PHB_SPELL_SPIKE_GROWTH" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="3,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="5" default="ID_PHB_SPELL_DAYLIGHT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="3,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="5" default="ID_PHB_SPELL_PLANT_GROWTH" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="4,(Evocation||Transmutation||Aura of Life),(($(spellcasting:list))||Druid||Wizard||Aura of Life)" level="7" default="ID_PHB_SPELL_AURA_OF_LIFE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="4,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="7" default="ID_XGTE_SPELL_GUARDIAN_OF_NATURE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="5,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="9" default="ID_XGTE_SPELL_DAWN" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Verdant Spells)" supports="5,(Evocation||Transmutation),(($(spellcasting:list))||Druid||Wizard)" level="9" default="ID_XGTE_SPELL_WRATH_OF_NATURE" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Magic Plant" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_MAGIC_PLANT">
+		<description>
+		<p>Your bloodline allows you to create a harmless plant unique to you. This plant is a Tiny object and can serve as a spellcasting focus for your Sorcerer spells. You decide what appearance your plant takes, or you can determine its appearance by rolling on the Magic Flora table.</p>
+		<h5 class="caption">Magic Flora</h5>
+		<table>
+			<thead>
+				<tr><td>d6</td><td>Plant Form</td></tr>
+			</thead>
+				<tr><td>1</td><td>A flower that changes color based on the brightness around it.</td></tr>
+				<tr><td>2</td><td>A pine-cone in which you can hear the drumming of a woodpecker by bringing it to your ear.</td></tr>
+				<tr><td>3</td><td>A tiny cactus that tickles you when you touch its spines.</td></tr>
+				<tr><td>4</td><td>A rose that changes smells based on the emotions of whoever holds it.</td></tr>
+				<tr><td>5</td><td>A twig that grows into a bouquet of flowers when in snow.</td></tr>
+				<tr><td>6</td><td>Seaweed that shrivels when in water.</td></tr>
+		</table>
+		<p class="indent">If you lose your plant, you can perform a 1-hour ritual to grow a replacement from your body. This ritual can be performed during a short or long rest, destroying the previous plant in the process.</p>
+		<p class="indent">While holding this focus, you have limited communication with plants. You can talk and question plants and plant creatures as if you shared a common language, and they can respond to you telepathically. Additionally, holding this focus grants you access to the <i>Thorn Whip</i> cantrip.</p>
+		</description>
+		<sheet alt="Magic Plant">
+			<description>Your bloodline allows you to create a harmless plant unique to you. This plant is a Tiny object and can serve as a spellcasting focus for your Sorcerer spells. While holding this focus, you have limited communication with plants. You can talk and question plants and plant creatures as if you shared a common language, and they can respond to you telepathically. &#13;
+			If you lose your plant, you can perform a 1-hour ritual to grow a replacement from your body. This ritual can be performed during a short or long rest, destroying the previous plant in the process.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_THORN_WHIP" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Pleasant Fragrance" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_PLEASANT_FRAGRANCE">
+		<description>
+		<p>Your nature ancestry allows you to emit powerful aromas to deter your attackers. Whenever you are targeted by an attack, you may use your reaction to expel a cloud of aromatic pollen, causing every creature within a 15-foot radius of you to roll a Constitution saving throw. Any creature that fails the save is Charmed by you until the end of your next turn. If your attacker fails the save, their attack misses. Once you’ve used this feature, you must finish a short or long rest before you are able to use it again.</p>
+		<p class="indent">Creatures with the Keen Smell feature have disadvantage on this saving throw, while creatures who do not need to breathe automatically succeed.</p>
+		</description>
+		<sheet alt="Pleasant Fragrance" action="Reaction" usage="1/Short Rest">
+			<description>Whenever you are targeted by an attack, you may use your reaction to expel a cloud of aromatic pollen. Every creature within a 15-foot radius of you must succeed on a DC{{sorcerer:spellcasting:dc}} Constitution save or be Charmed by you until the end of your next turn. If your attacker fails the save, their attack misses. &#13;
+			Creatures with the Keen Smell feature have disadvantage on this saving throw, while creatures who do not need to breathe automatically succeed.</description>
+		</sheet>
+	</element>
+	
+	<element name="Level 6: Tree Form" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_TREE_FORM">
+		<description>
+			<p>At 6th level, your bloodline allows you to physically mimic plant-life. As an action, you can spend 2 sorcery points to reduce your movement speed to 0, gaining a natural AC of 14 + your Constitution modifier along with two roots that you can control. While in this form, you are immune to being moved by creatures of size Large or smaller.</p>
+			<p class="indent"> These roots are considered as natural weapons in which you are proficient and can use your Charisma modifier on their attack and damage rolls, dealing 1d6 damage on a hit. Additionally, as a Bonus Action you can attempt to Shove or Grapple a creature within 20 feet of you with one of your roots.</p>
+			<p class="indent">This form lasts for a number of rounds equal to your Charisma modifier (minimum of 1), until you are incapacitated, or if you choose to end it as an action.</p>
+		</description>
+		<sheet alt="Tree Form" action="Action">
+			<description>You can spend 2 sorcery points to assume the form of a tree. Your movement is reduced to 0, but you gain a natural AC of {{ac:tree form)). While in this form, you are immune to being moved by Large or smaller creatures. &#13;
+			You have two roots that you can control. These roots are considered as natural weapons in which you are proficient and can use your Charisma modifier on their attack and damage rolls, dealing 1d6 bludgeoning damage on a hit. Additionally, as a Bonus Action you can attempt to Shove or Grapple a creature within 20 feet of you with one of your roots. &#13;
+			This form lasts for {{duration:tree form}} rounds. It ends early if you are incapacitated, or if you choose to end it as an action.</description>
+		</sheet>
+		<rules>
+			<stat name="ac:tree form" value="14" />
+			<stat name="ac:tree form" value="constitution:modifier" />
+			<stat name="duration:tree form" value="1" bonus="base" />
+			<stat name="duration:tree form" value="charisma:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Level 14: Photosynthesis" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_PHOTOSYNTHESIS">
+		<description>
+			<p>Starting at 14th level, you learn to gain nutriments from light and earth. You no longer need to eat or sleep. When you take a long rest, it finishes after four hours if you are in direct sunlight, or six in any other bright light.</p>
+			<p class="indent">Additionally, whenever you start your turn within bright light created by a spell of 2nd level and higher, you regain hit points equal to the spells level, or half as much if you are in dim light. If the spell would damage you while you are within its light, but does not deal fire damage, you are immune to its harmful effects.</p>
+		</description>
+		<sheet alt="Photosynthesis" >
+			<description>You no longer need to eat or sleep. When you take a long rest, it finishes after four hours if you are in direct sunlight, or six in any other bright light. &#13;
+			Additionally, whenever you start your turn within bright light created by a spell of 2nd level and higher, you regain hit points equal to the spells level, or half as much if you are in dim light. If the spell would damage you while you are within its light, but does not deal fire damage, you are immune to its harmful effects.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Awakening the Masters" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_VERDANT_AWAKENING_THE_MASTERS">
+		<description>
+			<p>At 18th level, you are capable of using your inner magic to rouse your siblings from their slumber. As an action, you can cast the <i>Awaken</i> spell without expending a spell slot or material components. When you do so, you can target only plants of size Gargantuan or smaller.</p>
+			<p class="indent">Once you cast <i>Awaken</i> in this way, you can’t do so again until you finish a long rest.</p>
+		<div class="reference">
+			<div element="ID_PHB_SPELL_AWAKEN" />
+		</div>
+		</description>
+		<sheet alt="Awakening the Masters" action="Action" usage="1/Long Rest">
+			<description>As an action, you can cast the Awaken spell without expending a spell slot or material components, targeting only plants of size Gargantuan or smaller.</description>
+		</sheet>
+	</element>
+
+	<append id="ID_PHB_SPELL_AURA_OF_LIFE">
+		<supports>Aura of Life</supports>
+	</append>
+</elements>

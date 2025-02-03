@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>The Anomaly</name>
+		<description>The The Anomaly Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1.1">
+			<file name="roy-sorcerer-anomaly.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-anomaly.xml" />
+		</update>
+	</info>
+
+	<element name="The Anomaly" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_THE_ANOMALY">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>Truth be told, your magical origin is a mystery. Your own origin may be as well. Nobody knows how you obtained your magic, no matter how hard the research. Nevertheless, you feel as one with this innate power, using this bizarre magic to alter the world around you or create wonders out of nothing.</p>
+			<p class="indent">Your innate magic has made your entrance into this world a very peculiar one. The Mysterious Origin table provides some examples.</p>
+			<h5 class="caption">Mysterious Origin</h5>
+			<table>
+				<thead>
+					<tr><td>d6</td><td>Mysterious Origin</td></tr>
+				</thead>
+					<tr><td>1</td><td>You were a born as if you came from a completely different family. You may be a halfling born from an elven family, a warforged from a triton household, or a goliath from gnome parents.</td></tr>
+					<tr><td>2</td><td>You are a triplet, manifesting in your parent seven days before your birth.</td></tr>
+					<tr><td>3</td><td>You manifested from thin air, knowing nothing but your name.</td></tr>
+					<tr><td>4</td><td>You can distinctly remember a life in a vastly different world.</td></tr>
+					<tr><td>5</td><td>As an individual took its last breath, their consciousness was overwritten by yours.</td></tr>
+					<tr><td>6</td><td>Your family lineage is incredibly mundane, perhaps <b><i>too</i></b> mundane.</td></tr>
+			</table>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_ANOMALY_EXPANDED_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_GLITCHED_MAGIC" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_WARPED_METAMAGIC" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MAGICAL_ODDITY" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MANIFEST_LIFE" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MASTER_TO_THE_UNKNOWN" />
+		</description>
+		<sheet display="false">
+			<description>your sorcerous ancestry is connected to a being who spent their life studying the very foundations of magic.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_ANOMALY_EXPANDED_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_GLITCHED_MAGIC" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_WARPED_METAMAGIC" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MAGICAL_ODDITY" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MANIFEST_LIFE" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MASTER_TO_THE_UNKNOWN" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Anomaly Expanded Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_ANOMALY_EXPANDED_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an illusion or transmutation spell from the sorcerer, warlock, or wizard spell list.</p>
+			<h5 class="caption">Anomaly Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Arms of Hadar, Protection from Evil and Good</em></td></tr>
+					<tr><td>3rd</td><td><em>Alter Self, Nystul's Magic Aura</em></td></tr>
+					<tr><td>5th</td><td><em>Blink, Dispel Magic</em></td></tr>
+					<tr><td>7th</td><td><em>Banishment, Confusion</em></td></tr>
+					<tr><td>9th</td><td><em>Creation, Reincarnate</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Anomaly Expanded Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an illusion or transmutation spell from the sorcerer, warlock, or wizard spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="1,(Illusion||Transmutation||Arms of Hadar),(($(spellcasting:list))||Warlock||Wizard)" level="1" default="ID_PHB_SPELL_ARMS_OF_HADAR" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="1,(Illusion||Transmutation||Protection from Evil and Good),(($(spellcasting:list))||Warlock||Wizard)" level="1" default="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="2,(Illusion||Transmutation),(($(spellcasting:list))||Warlock||Wizard)" level="3" default="ID_PHB_SPELL_ALTER_SELF" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="2,(Illusion||Transmutation),(($(spellcasting:list))||Warlock||Wizard)" level="3" default="ID_PHB_SPELL_NYSTULS_MAGIC_AURA" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="3,(Illusion||Transmutation),(($(spellcasting:list))||Warlock||Wizard)" level="5" default="ID_PHB_SPELL_BLINK" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="3,(Illusion||Transmutation||Dispel Magic),(($(spellcasting:list))||Warlock||Wizard)" level="5" default="ID_PHB_SPELL_DISPEL_MAGIC" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="4,(Illusion||Transmutation||Banishment),(($(spellcasting:list))||Warlock||Wizard)" level="7" default="ID_PHB_SPELL_BANISHMENT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="4,(Illusion||Transmutation||Confusion),(($(spellcasting:list))||Warlock||Wizard)" level="7" default="ID_PHB_SPELL_CONFUSION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="5,(Illusion||Transmutation),(($(spellcasting:list))||Warlock||Wizard)" level="9" default="ID_PHB_SPELL_CREATION" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Anomaly Spells)" supports="5,(Illusion||Transmutation),(($(spellcasting:list))||Warlock||Wizard||Reincarnate)" level="9" default="ID_PHB_SPELL_REINCARNATE" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Glitched Magic" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_GLITCHED_MAGIC">
+		<description>
+		<p>Starting at 1st level, you magic warps and can affect creatures that weren't the main target. When you hit a hostile creature with a spell attack or they fail a saving throw against your spell, you can cause a different creature to suffer the spell's effect. Roll a d6. If you roll a 4 or higher, you choose another creature that you can see to be the new target of the spell, and it immediately suffers its effects. This new target must be within a number of feet of the original target equal to the range of the spell.</p>
+		<p class="indent">You can successfully use this feature a number of times equal to your proficiency bonus, and you regain all expended uses after a long rest.</p>
+		</description>
+		<sheet alt="Glitched Magic" usage="{{proficiency}}/Long Rest">
+			<description>When you hit a hostile creature with a spell attack or they fail a saving throw against your spell, you can cause a different creature to suffer the spell's effect. Roll a d6. If you roll a 4 or higher, you choose another creature that you can see to be the new target of the spell, and it immediately suffers its effects. This new target must be within a number of feet of the original target equal to the range of the spell. &#13;
+			If you roll 3 or lower on the d6, the spell affects its original target and you do not expend a use of this feature.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Warped Metamagic" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_WARPED_METAMAGIC">
+		<description>
+		<p>Upon reaching 6th level, your unknown magical energy manifests to aid you in casting through odd ways. You gain a new metamagic of your choice. Each time you finish a long rest, choose a metamagic you know, and roll on the Warped Metamagic table.</p>
+		<h5 class="caption">Warped Metamagic</h5>
+		<table>
+			<thead>
+				<tr><td>d10</td><td>Warped Metamagic</td></tr>
+			</thead>
+				<tr><td>1</td><td>Careful</td></tr>
+				<tr><td>2</td><td>Distant</td></tr>
+				<tr><td>3</td><td>Empowered</td></tr>
+				<tr><td>4</td><td>Extended</td></tr>
+				<tr><td>5</td><td>Heightened</td></tr>
+				<tr><td>6</td><td>Quickened</td></tr>
+				<tr><td>7</td><td>Seeking</td></tr>
+				<tr><td>8</td><td>Subtle</td></tr>
+				<tr><td>9</td><td>Transmuted</td></tr>
+				<tr><td>10</td><td>Twinned</td></tr>
+		</table>
+		<p class="indent">You replace your chosen metamagic with the one you rolled. If you roll a metamagic you already have, it now costs half as much the next time you use it until you finish your next long rest.</p>
+		</description>
+		<sheet alt="Warped Metamagic" >
+			<description>Each time you finish a long rest, choose a metamagic you know, and roll on the Warped Metamagic table. You replace your chosen metamagic with the one you rolled. If you roll a metamagic you already have, the rolled metamagic costs half as much (minimum of 0) until you finish your next long rest.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Warped Metamagic" supports="Metamagic" />
+		</rules>
+	</element>
+	<element name="Level 6: Magical Oddity" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MAGICAL_ODDITY">
+		<description>
+			<p>Also at 6th level, your unknown magic can cause magic to fail against you. When you would be the target of a magical effect or spell, you can spend your reaction to roll a Charisma check against the opponent's save DC or attack roll. If you succeed the check, the spell or effect does not affect you.</p>
+			<p class="indent">Once you have successfully used this feature, you can't use it again until you finish a long rest, or until you spend 4 sorcery points to regain a use of this feature.</p>
+		</description>
+		<sheet alt="Magical Oddity" action="Reaction" usage="1/Long Rest">
+			<description>When you would be the target of a magical effect or spell, you can spend your reaction to roll a Charisma check against the opponent's save DC or attack roll. If you succeed the check, the spell or effect does not affect you. &#13;
+			You can spend 4 sorcery points (no action required) to regain a use of this feature.</description>
+		</sheet>
+		<rules>
+			<stat name="arcane access:spell level" value="proficiency" requirements="![level:17]" />
+			<stat name="arcane access:spell level" value="5" requirements="[level:17]" />
+		</rules>
+	</element>
+
+	<element name="Level 14: Manifest Life" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MANIFEST_LIFE">
+		<description>
+			<p>Starting at 14th level, you can use your magic to repeat what it had done to you, although temporarily. As an action, you create a humanoid with a challenge rating equal to half or less than your level in this class. It appears in an unoccupied space that you can see within 30 feet of you, and disappears when it drops to 0 hit points or after an hour. Any objects it appears with disappears with it.</p>
+			<p class="indent">You or your DM (your choice) determine the creature's appearance, personality traits, ideal, bond, and flaw. The humanoid is friendly to you and your companions for the duration, or until it takes damage from you or your companions.</p>
+			<p class="indent">In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to suggest it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the creature can take any action of its choice, not just Dodge.</p>
+			<p class="indent">If the humanoid creature disappears after an hour has passed, it leaves behind a Tiny pale orb. The next time you use this feature, you can expend this orb to manifest that creature again. If the creature disappears by dropping to 0 hit points, you can't summon that same creature again.</p>
+			<p class="indent">Once you have used this feature, you can't use it again until you finish a long rest.</p>
+		</description>
+		<sheet alt="Manifest Life" action="Action" usage="1/Long Rest">
+			<description>You create a humanoid of CR{{level:sorcerer:half}} or less. It appears in an unoccupied space that you can see within 30 feet of you, and disappears when it drops to 0 hit points or after an hour. Any objects it appears with disappear with it. &#13;
+			The humanoid is friendly to you and your companions for the duration, or until it takes damage from you or your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to suggest it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the creature can take any action of its choice, not just Dodge. &#13;
+			If the humanoid creature disappears after an hour has passed, it leaves behind a Tiny pale orb. The next time you use this feature, you can expend this orb to manifest that creature again. If the creature disappears by dropping to 0 hit points, you can't summon that same creature again.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Master to the Unknown" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_ANOMALY_MASTER_TO_THE_UNKNOWN">
+		<description>
+			<p>At 18th level, your magical origin can manifest magic where there normally be nothing. When you would roll initiative and have expended spell slots, you can roll a d6. You regain a number of spell slots equal to the roll, the spell level total equal to the roll.</p>
+			<p class="indent">Once you have used this feature, you can't use it again until you finish a long rest.</p>
+		</description>
+		<sheet alt="Master to the Unknown" usage="1/Long Rest">
+			<description>When you would roll initiative and have expended spell slots, you can roll a d6. You regain a number of spell slots equal to the roll, the spell level total equal to the roll.</description>
+		</sheet>
+	</element>
+
+	<append id="ID_PHB_SPELL_ARMS_OF_HADAR">
+		<supports>Arms of Hadar</supports>
+	</append>
+	<append id="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD">
+		<supports>Protection from Evil and Good</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DISPEL_MAGIC">
+		<supports>Dispel Magic</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BANISHMENT">
+		<supports>Banishment</supports>
+	</append>
+	<append id="ID_PHB_SPELL_CONFUSION">
+		<supports>Confusion</supports>
+	</append>
+	<append id="ID_PHB_SPELL_REINCARNATE">
+		<supports>Reincarnate</supports>
+	</append>
+</elements>

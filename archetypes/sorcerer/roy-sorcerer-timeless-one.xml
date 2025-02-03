@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Timeless One</name>
+		<description>The Timeless One Subclass from Royalty for the Galdera Setting.</description>
+		<author>Royalty</author>
+		<update version="0.1.1">
+			<file name="roy-sorcerer-timeless-one.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-timeless-one.xml" />
+		</update>
+	</info>
+
+	<element name="Timeless One" type="Archetype" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_SORCERER_TIMELESS_ONE">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>You are a creature of the past, present, and future. With magic that can shift the sands of time, you have a powerful control over your own fate. You might be a living time paradox, a creature born into the far flung future or the lost past, or a being born old that has been growing younger ever since. Whatever the case may be, the future is for you the shape to your liking.</p>
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_TIMELESS_EXPANDED_SPELLS" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_FUTURE_SENSES" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_MANIPULATE_SPELL_TIME" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_MANIFESTATION_OF_TIME" />
+			<div element="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_TEMPORAL_STASIS" />
+		</description>
+		<sheet display="false">
+			<description>You are a creature of the past, present, and future, with magic that can shift the sands of time.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_TIMELESS_EXPANDED_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_FUTURE_SENSES" level="1" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_MANIPULATE_SPELL_TIME" level="6" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_MANIFESTATION_OF_TIME" level="14" />
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_TEMPORAL_STASIS" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 1: Timeless One Expanded Spells" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_TIMELESS_EXPANDED_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown below. Each of these spells count as sorcerer spells for you, but it doesn’t count against the number of sorcerer spells you know.</p>
+			<p class="indent">Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an divination or transmutation spell from the bard, sorcerer, or wizard spell list.</p>
+			<h5 class="caption">Timeless One Expanded Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+					<tr><td>1st</td><td><em>Feather Fall, Gift of Alacrity</em></td></tr>
+					<tr><td>3rd</td><td><em>Blur, Immovable Object</em></td></tr>
+					<tr><td>5th</td><td><em>Haste, Slow</em></td></tr>
+					<tr><td>7th</td><td><em>Death Ward, Fabricate</em></td></tr>
+					<tr><td>9th</td><td><em>Legend Lore, Temporal Shunt</em></td></tr>
+			</table>
+		</description>
+		<sheet alt="Timeless One Expanded Spells">
+			<description>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an divination or transmutation spell from the bard, sorcerer, or wizard spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Spell (Timeless Spells)" supports="1,(Divination||Transmutation),(($(spellcasting:list))||Bard||Wizard)" level="1" default="ID_PHB_SPELL_FEATHER_FALL" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="1,(Divination||Transmutation),(($(spellcasting:list))||Bard||Wizard||Gift of Alacrity)" level="1" default="ID_WOTC_EGTW_SPELL_GIFT_OF_ALACRITY" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="2,(Divination||Transmutation||Blur),(($(spellcasting:list))||Bard||Wizard)" level="3" default="ID_PHB_SPELL_BLUR" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="2,(Divination||Transmutation),(($(spellcasting:list))||Bard||Wizard||Immovable Object)" level="3" default="ID_WOTC_EGTW_SPELL_IMMOVABLE_OBJECT" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="3,(Divination||Transmutation),(($(spellcasting:list))||Bard||Wizard)" level="5" default="ID_PHB_SPELL_HASTE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="3,(Divination||Transmutation),(($(spellcasting:list))||Bard||Wizard)" level="5" default="ID_PHB_SPELL_SLOW" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="4,(Divination||Transmutation||Death Ward),(($(spellcasting:list))||Bard||Wizard||Death Ward)" level="7" default="ID_PHB_SPELL_DEATH_WARD" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="4,(Divination||Transmutation),(($(spellcasting:list))||Bard||Wizard)" level="7" default="ID_PHB_SPELL_FABRICATE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="5,(Divination||Transmutation),(($(spellcasting:list))||Bard||Wizard)" level="9" default="ID_PHB_SPELL_LEGEND_LORE" spellcasting="Sorcerer" />
+			<select type="Spell" name="Spell (Timeless Spells)" supports="5,(Divination||Transmutation),(($(spellcasting:list))||Bard||Wizard||Temporal Shunt)" level="9" default="ID_WOTC_EGTW_SPELL_TEMPORAL_SHUNT" spellcasting="Sorcerer" />
+		</rules>
+	</element>
+	<element name="Level 1: Future Senses" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_FUTURE_SENSES">
+		<description>
+		<p>At 1st level, your body is six seconds ahead. You gain a bonus to initiative rolls equal to your Charisma modifier.</p>
+		<p class="indent">When initiative is rolled, choose a creature you can see within 30 feet of you. You can increase or decrease their roll by an amount equal to your Charisma modifier. You can do so a number of times equal to your proficiency bonus, and regain all expended uses after a long rest.</p>
+		</description>
+		<sheet alt="Future Senses" usage="{{proficiency}}/Long Rest">
+			<description>When initiative is rolled, choose a creature you can see within 30 feet of you. You can increase or decrease their roll by {{initiative change:future senses}}.</description>
+		</sheet>
+		<rules>
+			<stat name="initiative change:future senses" value="1" bonus="base" />
+			<stat name="initiative change:future senses" value="charisma:modifier" bonus="base" />
+			<stat name="initiative:misc" value="charisma:modifier" />
+
+		</rules>
+	</element>
+	
+	<element name="Level 6: Manipulate Spell-Time" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_MANIPULATE_SPELL_TIME">
+		<description>
+			<p>At 6th level, you gain the Extended or Quickened metamagic (your choice), and can use them without expending sorcery points.</p>
+			<p class="indent">Once you have used either metamagic without spending sorcery points, you can't do so again until you finish a short or long rest.</p>
+		</description>
+		<sheet alt="Manipulate Spell-Time" usage="1/Short Rest">
+			<description>You can use your chosen Metamagic without expending sorcery points. You must finish a short or long rest before you can do so again.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Manipulate Spell-Time" supports="ID_WOTC_PHB_CLASS_FEATURE_SORCERER_METAMAGIC_EXTENDED_SPELL|ID_WOTC_PHB24_CLASS_FEATURE_SORCERER_METAMAGIC_EXTENDED_SPELL|ID_WOTC_PHB_CLASS_FEATURE_SORCERER_METAMAGIC_QUICKEND_SPELL|ID_WOTC_PHB24_CLASS_FEATURE_SORCERER_METAMAGIC_QUICKEND_SPELL" />
+		</rules>
+	</element>
+
+	<element name="Level 14: Manifestation of Time" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_MANIFESTATION_OF_TIME">
+		<description>
+			<p>At 14th level, your body has become one with the flow of time. You no longer age and don't suffer the effects of old age, and can reduce the time you need to complete a long rest to up to 4 hours.</p>
+			<p class="indent">Additionally, when you would fail a saving throw or attack roll, you can spend your reaction and reroll, taking this new result.</p>
+			<p class="indent">Once you have spent a reaction in this way, you can't do so again until you finish a short or long rest.</p>
+		</description>
+		<sheet alt="Manifestation of Time" action="Reaction" usage="1/Short Rest">
+			<description>When you would fail a saving throw or attack roll, you can spend your reaction and reroll, taking this new result. &#13;
+			Additionally, you no longer age and don't suffer the effects of old age, and can reduce the time you need to complete a long rest to up to 4 hours.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Temporal Stasis" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_TEMPORAL_STASIS">
+		<description>
+			<p>At 18th level, you are able to freeze your enemies in time. Any critical hit against you is treated as a normal hit.</p>
+			<p class="indent">Additionally, whenever you take damage from a creature you can see or hear, you can use your reaction to force that creature to make a Constitution saving throw against your spell save DC. On a failed save, they gain an amount of temporary hit points equal to triple your level in this class, and are paralyzed for 1d4 hours.</p>
+			<p class="indent">While the creature has these temporary hit points, the stasis lasts for the duration or until you dismiss it (no action required). The creature loses any remaining temporary hit points when the feature ends.</p>
+			<p class="indent">Once you have used this feature, you can't use it again until you finish a long rest.</p>
+			</description>
+		<sheet alt="Critical Immunity">
+			<description>Any critical hit against you is treated as a normal hit.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_TEMPORAL_STASIS_REACTION" />
+		</rules>
+	</element>
+	<element name="Temporal Stasis" type="Archetype Feature" source="Royalty’s Galdera Collection" id="ID_ROY_GALDERA_ARCHETYPE_FEATURE_SORCERER_TIMELESS_TEMPORAL_STASIS_REACTION">
+		<compendium display="false" />
+		<description>
+			<p class="indent">Whenever you take damage from a creature you can see or hear, you can use your reaction to force that creature to make a Constitution saving throw against your spell save DC. On a failed save, they gain an amount of temporary hit points equal to triple your level in this class, and are paralyzed for 1d4 hours.</p>
+			<p class="indent">While the creature has these temporary hit points, the stasis lasts for the duration or until you dismiss it (no action required). The creature loses any remaining temporary hit points when the feature ends.</p>
+			<p class="indent">Once you have used this feature, you can't use it again until you finish a long rest.</p>
+			</description>
+		<sheet alt="Temporal Stasis" action="Reaction" usage="1/Long Rest">
+			<description>Whenever you take damage from a creature you can see or hear, you can use your reaction to force that creature to make a DC{{sorcerer:spellcasting:dc}} Constitution saving throw.. On a failed save, they gain {{thp:temporal stasis}} temporary hit points and are paralyzed for 1d4 hours. &#13;
+			While the creature has these temporary hit points, the stasis lasts for the duration or until you dismiss it (no action required). The creature loses any remaining temporary hit points when the feature ends.</description>
+		</sheet>
+		<rules>
+			<stat name="thp:temporal stasis" value="level:sorcerer" />
+			<stat name="thp:temporal stasis" value="level:sorcerer" />
+			<stat name="thp:temporal stasis" value="level:sorcerer" />
+		</rules>
+	</element>
+
+	<append id="ID_WOTC_EGTW_SPELL_GIFT_OF_ALACRITY">
+		<supports>Gift of Alacrity</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BLUR">
+		<supports>Blur</supports>
+	</append>
+	<append id="ID_WOTC_EGTW_SPELL_IMMOVABLE_OBJECT">
+		<supports>Immovable Object</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DEATH_WARD">
+		<supports>Death Ward</supports>
+	</append>
+	<append id="ID_WOTC_EGTW_SPELL_TEMPORAL_SHUNT">
+		<supports>Temporal Shunt</supports>
+	</append>
+
+</elements>
