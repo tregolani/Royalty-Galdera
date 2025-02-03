@@ -4,7 +4,7 @@
 		<name>Royalty’s Galdera Collection</name>
 		<description>A collection of personal homebrew created by Royalty for his Galdera setting.</description>
 		<author>"Royalty"</author>
-		<update version="1.4">
+		<update version="1.5">
 			<file name="royalty-galdera.index" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/royalty-galdera.index" />
 		</update>
 	</info>
@@ -32,12 +32,16 @@
 	<!-- Rogue -->
 
 	<!-- Sorcerer -->
+		<file name="roy-sorcerer-anomaly.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-anomaly.xml" />
 		<file name="roy-sorcerer-auroral.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-auroral.xml" />
 		<file name="roy-sorcerer-cosmic-body.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-cosmic-body.xml" />
 		<file name="roy-sorcerer-cursed-one.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-cursed-one.xml" />
 		<file name="roy-sorcerer-essence-of-war.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-essence-of-war.xml" />
 		<file name="roy-sorcerer-heroic-spirit.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-heroic-spirit.xml" />
 		<file name="roy-sorcerer-ooze-blood.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-ooze-blood.xml" />
+		<file name="roy-sorcerer-prodigy.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-prodigy.xml" />
+		<file name="roy-sorcerer-timeless-one.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-timeless-one.xml" />
+		<file name="roy-sorcerer-verdant-soul.xml" url="https://raw.githubusercontent.com/tregolani/Royalty-Galdera/master/archetypes/sorcerer/roy-sorcerer-verdant-soul.xml" />
 
 	<!-- Warlock -->
 
